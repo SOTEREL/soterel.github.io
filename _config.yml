@@ -1,0 +1,17 @@
+title: SOTEREL
+description: Soutenabilité Territoriale et Résilience Locale
+lang: fr-FR
+logo: /assets/img/logo.png
+image: /assets/img/thumbnail.png
+twitter:
+  card: summary_large_image
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
