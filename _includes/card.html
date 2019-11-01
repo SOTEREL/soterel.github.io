@@ -1,15 +1,12 @@
 <div class="card">
-  <div class="title">
-    <a href="{{ include.url | relative_url }}">
-      {{ include.title }}
-    </a>
-  </div>
+  <a class="title" href="{{ include.url | relative_url }}">
+    {{ include.title }}
+  </a>
   <p class="description">
     {{ include.description }}
   </p>
-  <div class="read-more">
-    <a href="{{ include.url | relative_url }}">
-      Plus ici
-    </a>
-  </div>
+  <div class="spacer"></div>
+  <a class="read-more" href="{{ include.url | relative_url }}">
+    +
+  </a>
 </div>

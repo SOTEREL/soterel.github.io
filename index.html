@@ -1,39 +1,61 @@
 ---
-head: |
-  <style>
-    h1 {
-      text-align: center;
-    }
+css:
+  - /assets/css/card.css
+style: |
+  h1 {
+    text-align: center;
+    margin: 0px;
+    font-variant: small-caps;
+    font-weight: normal;
+  }
 
-    .cards {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-    }
-  </style>
+  .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .description > * {
+    margin: 0px;
+    max-width: 400px;
+    text-align: justify;
+    text-indent: 40px;
+  }
+
+  .description a {
+    text-decoration: none;
+    color: #77dd77;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 ---
 
 <h1>Soutenabilité Territoriale et Résilience Locale</h1>
 
 <div class="description">
-  <p>Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... nos territoires et leurs habitants sont mis sous tension et le seront de plus en plus. Il est urgent de les rendre à la fois résilients et soutenables.</p>
-  <p>Nous sommes un collectif de citoyens développant des outils pour ce faire. Nous nous basons sur la permaculture et réfléchissons principalement à l'échelle communale.</p>
+  <p>
+    Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... Nos territoires et leurs habitants sont <a href="{{ "/constats" | relative_url }}">mis sous tension</a> et le seront de plus en plus. Il est urgent de les rendre à la fois <a href="{{ "/concepts" | relative_url }}">résilients</a> et <a href="{{ "/concepts" | relative_url }}">soutenables</a>.
+  </p>
+  <p>
+    Nous sommes un <a href="{{ "/a-propos" | relative_url }}">collectif de citoyens</a> développant des outils pour ce faire. Nous nous basons sur la <a href="{{ "/concepts" | relative_url }}">permaculture</a> et réfléchissons principalement à l'échelle communale.
+  </p>
 </div>
 
-<div class="cards">
-  {% include card.html
-    title="Constats"
-    description=""
-    url="/constats"
-  %}
+<div class="cards" id="outils">
   {% include card.html
     title="Diagnostic de résilience"
-    description=""
+    description="Nous souhaitons définir une méthodologie pour aider les citoyens à mener un diagnostic de résilience à l’échelle locale et la matérialiser, à terme, dans un outil numérique."
     url="/diagnostic-de-resilience/"
   %}
   {% include card.html
     title="Design permacole"
-    description=""
+    description="Nous souhaitons développer un outil numérique sous licence libre pour faciliter le design permacole d’un lieu et l’implication de ses habitants dans cette démarche."
     url="/design-permacole/"
   %}
 </div>

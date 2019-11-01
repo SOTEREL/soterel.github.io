@@ -2,14 +2,24 @@
 <html lang="{{ site.lang }}">
 <head>
   <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/img/favicon.png" | relative_url }}">
+
   <link rel="stylesheet" type="text/css" href="{{ "/assets/css/base.css" | relative_url }}">
-  {{ page.head }}
+
+  {% for url in page.css %}
+    <link rel="stylesheet" type="text/css" href="{{ url | relative_url }}">
+  {% endfor %}
+
+  <style>
+    {{ page.style }}
+  </style>
+
   {% seo %}
 </head>
 <body>
   <div id="container">
     <header>
-      <a href="{{ "/" | relative_url }}">
+      <a class="logo" href="{{ "/" | relative_url }}">
         <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="{{ site.title }}" />
       </a>
       <nav>
@@ -25,13 +35,8 @@
             </a>
           </li>
           <li>
-            <a href="{{ "/diagnostic-de-resilience/" | relative_url }}">
-              Diagnostic de résilience
-            </a>
-          </li>
-          <li>
-            <a href="{{ "/design-permacole/" | relative_url }}">
-              Design permacole
+            <a href="{{ "/#outils" | relative_url }}">
+              Outils
             </a>
           </li>
           <li>
@@ -50,6 +55,11 @@
     <footer>
     </footer>
   </div>
-  {{ page.js }}
+  {% for url in page.js %}
+    <script src="{{ url | relative_url }}"></script>
+  {% endfor %}
+  <script>
+    {{ page.script }}
+  </script>
 </body>
 </html>
