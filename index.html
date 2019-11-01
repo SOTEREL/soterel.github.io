@@ -1,4 +1,39 @@
 ---
+head: |
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+  </style>
 ---
 
-index
+<h1>Soutenabilité Territoriale et Résilience Locale</h1>
+
+<div class="description">
+  <p>Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... nos territoires et leurs habitants sont mis sous tension et le seront de plus en plus. Il est urgent de les rendre à la fois résilients et soutenables.</p>
+  <p>Nous sommes un collectif de citoyens développant des outils pour ce faire. Nous nous basons sur la permaculture et réfléchissons principalement à l'échelle communale.</p>
+</div>
+
+<div class="cards">
+  {% include card.html
+    title="Constats"
+    description=""
+    url="/constats"
+  %}
+  {% include card.html
+    title="Diagnostic de résilience"
+    description=""
+    url="/diagnostic-de-resilience/"
+  %}
+  {% include card.html
+    title="Design permacole"
+    description=""
+    url="/design-permacole/"
+  %}
+</div>

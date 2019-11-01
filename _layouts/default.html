@@ -9,13 +9,44 @@
 <body>
   <div id="container">
     <header>
-      <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-      <h2>{{ site.description }}</h2>
+      <a href="{{ "/" | relative_url }}">
+        <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="{{ site.title }}" />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="{{ "/constats" | relative_url }}">
+              Constats
+            </a>
+          </li>
+          <li>
+            <a href="{{ "/concepts" | relative_url }}">
+              Concepts
+            </a>
+          </li>
+          <li>
+            <a href="{{ "/diagnostic-de-resilience/" | relative_url }}">
+              Diagnostic de résilience
+            </a>
+          </li>
+          <li>
+            <a href="{{ "/design-permacole/" | relative_url }}">
+              Design permacole
+            </a>
+          </li>
+          <li>
+            <a href="{{ "/a-propos" | relative_url }}">
+              À propos
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <hr>
+
     <section id="content">
       {{ content }}
     </section>
+
     <footer>
     </footer>
   </div>
