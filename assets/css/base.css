@@ -8,19 +8,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 50px;
-  background: #77dd77;
+  padding: 20px 50px 15px 50px;
 }
 
 header a {
-  font-weight: bold;
   text-decoration: none;
-  color: #fff;
   text-transform: uppercase;
+  color: #000;
+  font-size: 14px;
+  font-family: "McLaren", cursive;
 }
 
-header a:hover {
-  text-decoration: underline;
+header .logo {
+  font-weight: bold;
+  color: #2f7c29;
+  font-size: 18px;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: #2f7c29;
 }
 
 header nav ul {

@@ -5,8 +5,12 @@ style: |
   h1 {
     text-align: center;
     margin: 0px;
-    font-variant: small-caps;
+    font-family: "McLaren", cursive;
     font-weight: normal;
+  }
+
+  h1 span {
+    color: #2f7c29;
   }
 
   .description {
@@ -25,8 +29,9 @@ style: |
   }
 
   .description a {
+    color: #2f7c29;
+    font-weight: bold;
     text-decoration: none;
-    color: #77dd77;
   }
 
   .cards {
@@ -36,14 +41,16 @@ style: |
   }
 ---
 
-<h1>Soutenabilité Territoriale et Résilience Locale</h1>
+<h1>
+  <span>So</span>utenabilité <span>Te</span>rritoriale et <span>Ré</span>silience <span>L</span>ocale
+</h1>
 
 <div class="description">
   <p>
-    Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... Nos territoires et leurs habitants sont <a href="{{ "/constats" | relative_url }}">mis sous tension</a> et le seront de plus en plus. Il est urgent de les rendre à la fois <a href="{{ "/concepts" | relative_url }}">résilients</a> et <a href="{{ "/concepts" | relative_url }}">soutenables</a>.
+    Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... Nos territoires et leurs habitants sont <a href="{{ "/constats" | relative_url }}">mis sous tension</a> et le seront de plus en plus. Il est urgent de les rendre à la fois <a href="{{ "/concepts#resilience" | relative_url }}">résilients</a> et <a href="{{ "/concepts#soutenabilite" | relative_url }}">soutenables</a>.
   </p>
   <p>
-    Nous sommes un <a href="{{ "/a-propos" | relative_url }}">collectif de citoyens</a> développant des outils pour ce faire. Nous nous basons sur la <a href="{{ "/concepts" | relative_url }}">permaculture</a> et réfléchissons principalement à l'échelle communale.
+    Nous sommes un <a href="{{ "/a-propos" | relative_url }}">collectif de citoyens</a> développant des outils pour ce faire. Nous nous basons sur la <a href="{{ "/concepts#permaculture" | relative_url }}">permaculture</a> et réfléchissons principalement à l'échelle communale.
   </p>
 </div>
 
