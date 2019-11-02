@@ -64,6 +64,12 @@ header nav li {
   color: #2f7c29;
 }
 
+#content h2 {
+  font-family: "McLaren", cursive;
+  font-weight: normal;
+  font-size: 24px;
+}
+
 .spacer {
   flex-grow: 1;
 }

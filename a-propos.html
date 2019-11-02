@@ -1,10 +1,62 @@
 ---
 title: "À propos"
 description: "Description du projet SOTEREL et de son équipe."
+css:
+  - /assets/css/section.css
 ---
 
 <h1><span>À</span> propos</h1>
 
-* équipe
-* partenaires
-* contact
+{% capture team %}
+<p>Equipe</p>
+<p>Equipe</p>
+<p>Equipe</p>
+<p>Equipe</p>
+<p>Equipe</p>
+<p>Equipe</p>
+<p>Equipe</p>
+<p>Equipe</p>
+{% endcapture %}
+
+{% capture partners %}
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+<p>Partenaires</p>
+{% endcapture %}
+
+{% capture contact %}
+Contact
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+<p>Contact</p>
+{% endcapture %}
+
+<div class="sections">
+  {% include section.html
+    title="L'équipe"
+    content=team
+  %}
+  {% include section.html
+    title="Nos partenaires"
+    content=partners
+  %}
+  {% include section.html
+    title="Contact"
+    content=contact
+  %}
+</div>

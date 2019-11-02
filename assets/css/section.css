@@ -1,0 +1,16 @@
+.sections {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-row-gap: 40px;
+}
+
+.sections h2 {
+  margin: 0px;
+  border-right: 1px solid #2f7c29;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.sections .content {
+  padding-left: 20px;
+}
