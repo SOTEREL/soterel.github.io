@@ -3,60 +3,81 @@ title: "À propos"
 description: "Description du projet SOTEREL et de son équipe."
 css:
   - /assets/css/section.css
+style: |
+  .team {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .team_member {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+
+  .team_member .photo {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .team_member .name {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    font-family: "McLaren", cursive;
+    margin-top: 5px;
+  }
+
+  .team_member .first_name {
+    color: #2f7c29;
+  }
+
+  .team_member .description {
+    text-align: left;
+    text-indent: 20px;
+    font-size: 14px;
+    margin: 0px;
+    margin-top: 10px;
+  }
 ---
 
 <h1><span>À</span> propos</h1>
 
-{% capture team %}
-<p>Equipe</p>
-<p>Equipe</p>
-<p>Equipe</p>
-<p>Equipe</p>
-<p>Equipe</p>
-<p>Equipe</p>
-<p>Equipe</p>
-<p>Equipe</p>
-{% endcapture %}
-
-{% capture partners %}
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-<p>Partenaires</p>
-{% endcapture %}
-
-{% capture contact %}
-Contact
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-<p>Contact</p>
-{% endcapture %}
-
 <div class="sections">
-  {% include section.html
-    title="L'équipe"
-    content=team
-  %}
-  {% include section.html
-    title="Nos partenaires"
-    content=partners
-  %}
-  {% include section.html
-    title="Contact"
-    content=contact
-  %}
+  <h2 id="equipe">L'équipe</h2>
+  <div class="content team">
+    {% include team_member.html
+      first_name="Vincent"
+      last_name="Lefoulon"
+      description="Description TODO"
+      image_url="/assets/img/vincent_lefoulon.png"
+    %}
+    {% include team_member.html
+      first_name="Julie"
+      last_name="Bonnet"
+      description="Description TODO"
+      image_url="/assets/img/julie_bonnet.png"
+    %}
+  </div>
+
+  <h2 id="partenaires">Nos partenaires</h2>
+  <div class="content partners">
+    <p>Partenaires</p>
+    <p>Partenaires</p>
+    <p>Partenaires</p>
+    <p>Partenaires</p>
+    <p>Partenaires</p>
+  </div>
+
+  <h2 id="contact">Contact</h2>
+  <div class="content contact">
+    Contact
+    <p>Contact</p>
+    <p>Contact</p>
+    <p>Contact</p>
+  </div>
 </div>
