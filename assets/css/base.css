@@ -51,6 +51,19 @@ header nav li {
   padding: 30px;
 }
 
+#content h1 {
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 30px;
+  font-family: "McLaren", cursive;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+#content h1 span {
+  color: #2f7c29;
+}
+
 .spacer {
   flex-grow: 1;
 }
