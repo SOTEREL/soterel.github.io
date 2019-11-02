@@ -2,11 +2,16 @@
   <a class="title" href="{{ include.url | relative_url }}">
     {{ include.title }}
   </a>
+  <hr class="sep" />
   <p class="description">
     {{ include.description }}
   </p>
   <div class="spacer"></div>
-  <a class="read-more" href="{{ include.url | relative_url }}">
-    <div>+</div>
-  </a>
+  <div class="read-more">
+    <hr />
+    <a href="{{ include.url | relative_url }}">
+      Plus ici
+    </a>
+    <hr />
+  </div>
 </div>

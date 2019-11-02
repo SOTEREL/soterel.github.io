@@ -1,6 +1,5 @@
 .card {
   max-width: 400px;
-  border: 1px solid #2f7c29;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -8,41 +7,48 @@
 
 .card .title {
   text-align: center;
-  background: #2f7c29;
-  padding: 20px;
   text-decoration: none;
-  color: #fff;
   display: block;
   font-size: 20px;
   font-family: "McLaren", cursive;
+  color: #000;
+}
+
+.card hr {
+  height: 1px;
+  background: #2f7c29;
+  border: none;
+}
+
+.card .sep {
+  width: 100%;
+  max-width: 300px;
 }
 
 .card .description {
   text-indent: 20px;
   font-size: 14px;
-  padding: 10px;
-  padding-bottom: 0px;
+  padding: 5px 0px;
   margin: 0px;
 }
 
 .card .read-more {
-  text-align: center;
-  padding: 10px;
-  padding-top: 0px;
-  text-decoration: none;
-  font-size: 35px;
-  padding: 0px 6px;
-  font-weight: bold;
-  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
 }
 
-.card .read-more div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #2f7c29;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+.card .read-more hr {
+  flex-grow: 1;
+}
+
+.card .read-more a {
+  text-decoration: none;
+  font-family: "McLaren", cursive;
+  text-transform: uppercase;
   color: #2f7c29;
+  font-size: 14px;
+  margin: 0 10px;
 }
