@@ -73,3 +73,21 @@ header nav li {
 .spacer {
   flex-grow: 1;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #2f7c29;
+}
