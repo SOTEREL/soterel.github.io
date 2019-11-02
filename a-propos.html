@@ -3,45 +3,42 @@ title: "À propos"
 description: "Description du projet SOTEREL et de son équipe."
 css:
   - /assets/css/section.css
+  - /assets/css/card.css
 style: |
-  .team {
+  .content > p {
+    margin: 0px;
+    margin-bottom: 15px;
+    text-indent: 40px;
+  }
+
+  .team .members {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
 
-  .team_member {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    display: flex;
-  }
-
-  .team_member .photo {
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-
-  .team_member .name {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
-    font-family: "McLaren", cursive;
-    margin-top: 5px;
-  }
-
-  .team_member .first_name {
+  .team .card .title span {
     color: #2f7c29;
   }
 
-  .team_member .description {
-    text-align: left;
-    text-indent: 20px;
-    font-size: 14px;
-    margin: 0px;
-    margin-top: 10px;
+  .partners .members {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .partners .members a {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .contact .email {
+    margin-bottom: 15px;
+  }
+
+  .contact .email a {
+    color: #000;
   }
 ---
 
@@ -50,34 +47,49 @@ style: |
 <div class="sections">
   <h2 id="equipe">L'équipe</h2>
   <div class="content team">
-    {% include team_member.html
-      first_name="Vincent"
-      last_name="Lefoulon"
-      description="Description TODO"
-      image_url="/assets/img/vincent_lefoulon.png"
-    %}
-    {% include team_member.html
-      first_name="Julie"
-      last_name="Bonnet"
-      description="Description TODO"
-      image_url="/assets/img/julie_bonnet.png"
-    %}
+    <p>
+      Nous sommes un collectif de citoyens développant des outils sous licence libre pour la soutenabilité territoriale et la résilience locale. Nous nous basons sur la permaculture et réfléchissons principalement à l'échelle communale. Nous n'avons pour le moment pas de structure juridique.
+    </p>
+    <div class="members">
+      {% include card.html
+        title="<span>Vincent</span> Lefoulon"
+        description="Description TODO"
+        url="https://vayel.github.io/"
+      %}
+      {% include card.html
+        title="<span>Julie</span> Bonnet"
+        description="Description TODO"
+        url="https://www.linkedin.com/in/julie-bonnet/"
+      %}
+    </div>
   </div>
 
   <h2 id="partenaires">Nos partenaires</h2>
   <div class="content partners">
-    <p>Partenaires</p>
-    <p>Partenaires</p>
-    <p>Partenaires</p>
-    <p>Partenaires</p>
-    <p>Partenaires</p>
+    <p>
+      Nous cherchons autant que possible à créer des synergies avec des projets existants. Les organismes et personnes suivantes nous soutiennent et/ou collaborent avec nous. Vous aussi ?
+    </p>
+    <div class="members">
+      <a href="https://campus-transition.org/">
+        <img src="{{ "/assets/img/campus_transition.png" | relative_url }}" alt="Campus de la Transition" />
+      </a>
+      <a href="https://team.inria.fr/steep/">
+        <img src="{{ "/assets/img/steep.png" | relative_url }}" alt="Sustainability Transition, Environment, Economy and local Policy - INRIA" />
+      </a>
+    </div>
   </div>
 
   <h2 id="contact">Contact</h2>
   <div class="content contact">
-    Contact
-    <p>Contact</p>
-    <p>Contact</p>
-    <p>Contact</p>
+    <div class="email">
+      <a href="mailto:vincent.lefoulon@free.fr">
+        vincent.lefoulon@free.fr
+      </a>
+    </div>
+    <div class="address">
+      Le Jardin<br />
+      Place de l’église<br />
+      12120 ARVIEU
+    </div>
   </div>
 </div>
