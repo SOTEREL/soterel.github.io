@@ -1,5 +1,5 @@
 .card {
-  max-width: 300px;
+  max-width: 400px;
   border: 1px solid #2f7c29;
   display: flex;
   flex-direction: column;
@@ -30,9 +30,19 @@
   padding: 10px;
   padding-top: 0px;
   text-decoration: none;
-  color: #2f7c29;
   font-size: 35px;
   padding: 0px 6px;
-  display: block;
   font-weight: bold;
+  margin: 15px auto;
+}
+
+.card .read-more div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #2f7c29;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #2f7c29;
 }

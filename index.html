@@ -9,6 +9,10 @@ style: |
     font-weight: normal;
   }
 
+  h1 {
+    font-size: 30px;
+  }
+
   h1 span {
     color: #2f7c29;
   }
@@ -29,15 +33,14 @@ style: |
   }
 
   .description a {
-    color: #2f7c29;
-    font-weight: bold;
-    text-decoration: none;
+    color: #000;
   }
 
   .cards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 20px;
   }
 ---
 
@@ -47,22 +50,22 @@ style: |
 
 <div class="description">
   <p>
-    Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... Nos territoires et leurs habitants sont <a href="{{ "/constats" | relative_url }}">mis sous tension</a> et le seront de plus en plus. Il est urgent de les rendre à la fois <a href="{{ "/concepts#resilience" | relative_url }}">résilients</a> et <a href="{{ "/concepts#soutenabilite" | relative_url }}">soutenables</a>.
+    Proximité du <a href="{{ "/constats#pic-petrolier" | relative_url }}">pic pétrolier</a>, <a href="{{ "/constats#changement-climatique" | relative_url }}">changement climatique</a>, <a href="{{ "/constats#destruction-des-ecosystemes" | relative_url }}">destruction des écosystèmes</a>, <a href="{{ "/constats#inegalites-sociales" | relative_url }}">inégalités sociales</a>... Nos territoires et leurs habitants sont mis sous tension et le seront de plus en plus. Il est urgent de les rendre à la fois <a href="{{ "/concepts#resilience" | relative_url }}">résilients</a> et <a href="{{ "/concepts#soutenabilite" | relative_url }}">soutenables</a>.
   </p>
   <p>
-    Nous sommes un <a href="{{ "/a-propos" | relative_url }}">collectif de citoyens</a> développant des outils pour ce faire. Nous nous basons sur la <a href="{{ "/concepts#permaculture" | relative_url }}">permaculture</a> et réfléchissons principalement à l'échelle communale.
+    Nous sommes un <a href="{{ "/a-propos" | relative_url }}">collectif de citoyens</a> développant pour ce faire des outils sous licence libre. Nous nous basons sur la <a href="{{ "/concepts#permaculture" | relative_url }}">permaculture</a> et réfléchissons principalement à l'échelle communale.
   </p>
 </div>
 
 <div class="cards" id="outils">
   {% include card.html
-    title="Diagnostic de résilience"
-    description="Nous souhaitons définir une méthodologie pour aider les citoyens à mener un diagnostic de résilience à l’échelle locale et la matérialiser, à terme, dans un outil numérique."
+    title="Outil de diagnostic de résilience"
+    description="Nous souhaitons définir une méthodologie pour aider les citoyens à mener un diagnostic de résilience à échelle locale et la matérialiser, à terme, dans un outil numérique."
     url="/diagnostic-de-resilience/"
   %}
   {% include card.html
-    title="Design permacole"
-    description="Nous souhaitons développer un outil numérique sous licence libre pour faciliter le design permacole d’un lieu et l’implication de ses habitants dans cette démarche."
+    title="Outil de design permacole"
+    description="Nous souhaitons développer un outil numérique pour faciliter le design permacole d’un lieu et l’implication de ses habitants dans cette démarche."
     url="/design-permacole/"
   %}
 </div>
