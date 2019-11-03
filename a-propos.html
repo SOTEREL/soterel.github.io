@@ -36,10 +36,6 @@ style: |
   .contact .email {
     margin-bottom: 15px;
   }
-
-  .contact .email a {
-    color: #000;
-  }
 ---
 
 <h1><span>À</span> propos</h1>
@@ -48,7 +44,7 @@ style: |
   <h2 id="equipe">L'équipe</h2>
   <div class="content team">
     <p>
-      Nous sommes un collectif de citoyens développant des outils sous licence libre pour la soutenabilité territoriale et la résilience locale. Nous nous basons sur la permaculture et réfléchissons principalement à l'échelle communale. Nous n'avons pour le moment pas de structure juridique.
+      Nous sommes un collectif de citoyens développant des outils sous licence libre pour la <a href="{{ "/concepts#soutenabilite" | relative_url }}">soutenabilité</a> territoriale et la <a href="{{ "/concepts#resilience" | relative_url }}">résilience</a> locale. Nous nous basons sur la <a href="{{ "/concepts#permaculture" | relative_url }}">permaculture</a> et réfléchissons principalement à l'<a href="{{ "/concepts#echelle-locale" | relative_url }}">échelle locale</a>. Nous n'avons pour le moment pas de structure juridique.
     </p>
     <div class="members">
       {% include card.html
