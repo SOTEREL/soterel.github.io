@@ -2,7 +2,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 16px;
+  font-size: 100%;
 }
 
 a {
@@ -11,7 +11,7 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 120px 1fr;
   justify-content: center;
   align-items: center;
   padding: 20px 50px 15px 50px;
@@ -24,14 +24,18 @@ header.project {
 header a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
   font-family: "McLaren", cursive;
+}
+
+header a:hover,
+header a:focus {
+  color: #2f7c29;
 }
 
 header .logo {
   font-weight: bold;
   color: #2f7c29;
-  font-size: 18px;
+  font-size: 1.4em;
 }
 
 header .project-title {
@@ -40,14 +44,9 @@ header .project-title {
 
 header .project-title h2 {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1.1em;
   margin: 0px;
   margin-right: 20px;
-}
-
-header a:hover,
-header a:focus {
-  color: #2f7c29;
 }
 
 header nav {
@@ -64,6 +63,7 @@ header nav li {
   list-style-type: none;
   padding: 0px 10px;
   margin: 0px;
+  font-size: 0.9em;
 }
 
 #content {
@@ -76,7 +76,7 @@ header nav li {
   margin-bottom: 30px;
   font-family: "McLaren", cursive;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 #content h1 span {
@@ -86,7 +86,7 @@ header nav li {
 #content h2 {
   font-family: "McLaren", cursive;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .spacer {
