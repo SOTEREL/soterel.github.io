@@ -2,7 +2,6 @@
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .card .title {
@@ -51,4 +50,10 @@
   color: #2f7c29;
   font-size: 14px;
   margin: 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    margin-bottom: 40px;
+  }
 }

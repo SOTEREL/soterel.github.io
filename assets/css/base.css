@@ -10,10 +10,15 @@ a {
 }
 
 header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 1fr;
   justify-content: center;
   align-items: center;
   padding: 20px 50px 15px 50px;
+}
+
+header.project {
+  grid-template-columns: 150px auto 1fr;
 }
 
 header a {
@@ -27,11 +32,9 @@ header .logo {
   font-weight: bold;
   color: #2f7c29;
   font-size: 18px;
-  margin-right: 20px;
 }
 
 header .project-title {
-  flex-grow: 1;
   text-align: center;
 }
 
@@ -48,7 +51,6 @@ header a:focus {
 }
 
 header nav {
-  flex-grow: 1;
   text-align: right;
 }
 
@@ -106,4 +108,46 @@ footer a {
 footer a:hover,
 footer a:focus {
   color: #2f7c29;
+}
+
+@media screen and (max-width: 500px) {
+  header.project {
+    grid-template-columns: 1fr;
+  }
+
+  header.project .logo,
+  header.project nav {
+    text-align: center;
+  }
+
+  header.project .project-title,
+  header.project nav {
+    margin-top: 20px;
+  }
+
+  #content {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header nav li {
+    display: block;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  footer .nav,
+  footer .social {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header.project nav li {
+    display: block;
+  }
 }
