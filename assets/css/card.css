@@ -11,6 +11,7 @@
   font-size: 1.2em;
   font-family: "McLaren", cursive;
   color: #000;
+  margin: 0px;
 }
 
 .card hr {
@@ -54,6 +55,7 @@
 
 @media screen and (max-width: 800px) {
   .card {
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }

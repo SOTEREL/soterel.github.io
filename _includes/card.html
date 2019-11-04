@@ -1,7 +1,13 @@
 <div class="card">
+  {% if include.url and include.url != "" %}
   <a class="title" href="{{ include.url | relative_url }}">
     {{ include.title }}
   </a>
+  {% else %}
+  <p class="title">
+    {{ include.title }}
+  </p>
+  {% endif %}
   <hr class="sep" />
   <p class="description">
     {{ include.description }}
@@ -9,9 +15,11 @@
   <div class="spacer"></div>
   <div class="read-more">
     <hr />
+    {% if include.url and include.url != "" %}
     <a href="{{ include.url | relative_url }}">
       Plus ici
     </a>
     <hr />
+    {% endif %}
   </div>
 </div>
