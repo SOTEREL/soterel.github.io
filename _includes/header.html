@@ -1,6 +1,10 @@
 <header>
   <a class="logo" href="{{ "/" | relative_url }}">
-    <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="{{ site.title }}" />
+    {% if site.logo and site.logo != "" %}
+      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
+    {% else %}
+      {{ site.title }}
+    {% endif %}
   </a>
   <nav>
     <ul>
