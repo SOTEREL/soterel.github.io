@@ -1,0 +1,37 @@
+.introduction {
+  text-indent: 40px;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.introduction ul {
+  margin: 0px;
+  margin-top: 10px;
+  text-indent: 0px;
+}
+
+.content {
+  max-width: 550px;
+}
+
+.content > p {
+  margin: 0px;
+  margin-bottom: 10px;
+  text-indent: 40px;
+}
+
+.content strong {
+  color: #2f7c29;
+  font-weight: normal;
+}
+
+.content .infobox {
+  margin: auto;
+}
+
+.content ul.resources {
+  margin: 0px;
+  padding-left: 20px;
+}

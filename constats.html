@@ -1,9 +1,79 @@
 ---
 title: "Constats"
 description: "Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... nos territoires et leurs habitants sont mis sous tension et le seront de plus en plus. Il est urgent de les rendre à la fois résilients et soutenables."
+css:
+  - /assets/css/section.css
+  - /assets/css/infobox.css
+  - /assets/css/section_page.css
 ---
 
 <h1><span>C</span>onstats</h1>
 
+<div class="introduction">
+  Cette page dresse un petit bilan, partiel, de l'état de notre planète. Nous avons retenu l'information qui nous a le plus marqués. Pour des vues d'ensemble complémentaires, nous vous conseillons les ressources suivantes :
+
+  <ul>
+    <li>Pablo Servigne et Raphaël Stevens, <i>Comment tout peut s'effondrer</i>, Éditions du Seuil, 2015.</li>
+    <li>Philippe Bihouix, <i>L'Âge des low tech</i>, Éditions du Seuil, 2014.</li>
+    <li>François Gemenne et Aleksandar Rankovic, <i>Atlas de l’Anthropocène</i>, Presses de Sciences Po, 2019.</li>
+    <li>Arthur Keller, <a href="https://www.youtube.com/watch?v=_42nPGtJ7LE">Construire des espoirs lucides pour le futur</a>, 2019.</li>
+    <li>Emmanuel Prados, <a href="https://www.youtube.com/watch?v=1dgjIeR5DBY">Comprendre les phénomènes d’effondrement de sociétés. Quel avenir pour la nôtre ?</a>, 2017.</li>
+  </ul>
+</div>
+
 * pourquoi échelle communale ?
 * mentionner des prédictions (ex : GIEC) mais aussi des trucs qui arrivent déjà et qu'on peut percevoir (manques d'eau, stagnation des rendements...)
+
+<div class="sections">
+  <h2 id="pic-petrolier">Pic pétrolier</h2>
+  <div class="content">
+    {% capture resources %}
+      <ul class="resources">
+        <li></li>
+      </ul>
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
+  </div>
+
+  <h2 id="changement-climatique">Changement climatique</h2>
+  <div class="content">
+    {% capture resources %}
+      <ul class="resources">
+        <li></li>
+      </ul>
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
+  </div>
+
+  <h2 id="destruction-des-ecosystemes">Destruction des écosystèmes</h2>
+  <div class="content">
+    {% capture resources %}
+      <ul class="resources">
+        <li></li>
+      </ul>
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
+  </div>
+
+  <h2 id="inegalites-sociales">Inégalités sociales</h2>
+  <div class="content">
+    {% capture resources %}
+      <ul class="resources">
+        <li></li>
+      </ul>
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
+  </div>
+</div>
