@@ -12,10 +12,6 @@
   text-indent: 0px;
 }
 
-.content {
-  max-width: 550px;
-}
-
 .content > p {
   margin: 0px;
   margin-bottom: 10px;
