@@ -1,0 +1,18 @@
+.quotation {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.quotation .quote {
+  font-family: "McLaren", cursive;
+  font-size: 40px;
+  color: #2f7c29;
+}
+
+.quotation .text {
+  text-align: center;
+  padding: 10px;
+}

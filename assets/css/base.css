@@ -9,6 +9,11 @@ a {
   color: #000;
 }
 
+strong {
+  color: #2f7c29;
+  font-weight: normal;
+}
+
 header {
   display: grid;
   grid-template-columns: 120px 1fr;

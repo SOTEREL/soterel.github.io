@@ -2,8 +2,127 @@
 title: "Design permacole"
 description: "Outil numérique d'aide au design permacole."
 header: "header_design_permacole.html"
+css:
+  - /assets/css/infobox.css
+  - /assets/css/quotation.css
+style: |
+  #content > p, ul.contributing {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  #content > p:not([class]) {
+    text-indent: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul.contributing {
+    margin-top: 20px;
+  }
+
+  .features {
+    max-width: 700px;
+    margin: auto;
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .features li {
+    margin: 15px 10px;
+    max-width: 300px;
+  }
+
+  #content .more-features {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .more-features a {
+    font-family: "McLaren", cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2f7c29;
+    font-size: 0.9em;
+  }
+
+  .design-properties {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 25px 0;
+  }
 ---
 
-* problématique
-* avancement
-* prochaines étapes
+{% capture quotation %}
+  Nous développons un outil numérique sous licence libre pour faciliter le <a href="{{ "/concepts#permaculture" | relative_url }}">design permacole</a> d’un lieu à <a href="{{ "/concepts#echelle-locale" | relative_url }}">échelle locale</a> et l’implication de ses habitants dans cette démarche.
+{% endcapture %}
+
+{% include quotation.html
+  text=quotation
+%}
+
+<p>
+<strong>Nous partons du constat que la méthode de design est complexe.</strong> Par son approche <a href="{{ "/concepts#systemique" | relative_url }}">systémique</a>, elle demande de compiler de nombreuses informations de natures diverses (textes, cartes, statistiques...) et mobilise des connaissances dans de multiples domaines (alimentation, eau, élevage, construction...). Les amateurs et les non-initiés (éventuellement les habitants des lieux) peuvent facilement se perdre dans cette quantité d’informations.
+</p>
+
+<p>
+Cet outil aide à les stocker, les visualiser et les croiser, ainsi qu’à présenter le travail effectué. <strong>Il a pour but de fluidifier et de structurer le processus de design, sans pour autant se substituer ni à l'analyse des objectifs et du contexte, ni à la conception par les divers acteurs.</strong> L’objectif est de parvenir à un design :
+</p>
+
+<p>
+  <strong>Complet.</strong>
+  Nous souhaitons inciter à suivre les principales phases du design et notamment à bien définir le projet et à analyser le contexte.
+</p>
+
+<p>
+  <strong>Présentable.</strong>
+  Nous souhaitons rendre la présentation du design (aux habitants, aux élus…) simple et claire, et notamment permettre de créer facilement des cartes esthétiques et documentées.
+</p>
+
+<p>
+  <strong>Évolutif.</strong>
+  Nous souhaitons que le design puisse être facilement mis à jour au cours du temps, au fil des travaux, erreurs et évènements inattendus.
+</p>
+
+<p>
+  <strong>Collaboratif.</strong>
+  Nous souhaitons faciliter le travail à plusieurs et encourager l’inclusion des habitants du lieu dans la démarche.
+</p>
+
+<p>
+Nous introduisons notre problématique plus en profondeur <a href="{{ "/design-permacole/problematique" | relative_url }}">ici</a>. Concrètement, cet outil permettra, entre autres :
+</p>
+
+<ul class="features">
+  <li>De s’assurer que chaque grande phase du design a été suivie (définition du projet, observation du contexte, conception du système et mise en place) ;</li>
+  <li>De récupérer un fond de carte du lieu ainsi que des données décrivant une partie du contexte (pluviométrie, niveau d’ensoleillement, cadastres...) ;</li>
+  <li>D’insérer sur le plan des éléments graphiques prédéfinis et esthétiques (potagers, mares, flux, secteurs… existants ou à intégrer au système) ;</li>
+  <li>De filtrer et rechercher facilement des éléments du plan directeur (système d'eau, bâtiments) ;</li>
+  <li>De documenter le design de façon visuelle (par exemple en représentant les synergies entre les éléments de la carte) ;</li>
+  <li>De générer des présentations interactives (par exemple, visualiser l’évolution du lieu au cours du temps) ;</li>
+</ul>
+
+<p class="more-features">
+<a href="{{ "/design-permacole/conception" | relative_url }}">Plus ici</a>
+</p>
+
+<p>
+Le projet est en cours de définition, le développement informatique n’a pas commencé. Il se veut itératif et en forte interaction avec des permaculteurs et des habitants de lieux à échelle locale (hameaux, micro-fermes, villages…). Nous envisageons de suivre les phases suivantes :
+</p>
+
+TODO
+
+<p>
+Le projet vous intéresse ? Vous pouvez nous contacter <a href="{{ "/a-propos#contact" | relative_url }}">ici</a>. Nous sommes ouverts aux diverses contributions :
+</p>
+
+<ul class="contributing">
+  <li><strong>Remarques sur le contenu :</strong> pertinence du concept, clarté des explications, aspects à creuser...</li>
+  <li><strong>Contributions au code :</strong> développement web, interface, graphisme, sobriété numérique...</li>
+  <li><strong>Retours sur l’outil :</strong> ergonomie, esthétisme, fonctionnalités manquantes...</li>
+  <li>...</li>
+</ul>
