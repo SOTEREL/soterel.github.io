@@ -1,11 +1,5 @@
 <header class="project">
-  <a class="logo" href="{{ "/" | relative_url }}">
-    {% if site.logo and site.logo != "" %}
-      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </a>
+  {% include logo.html %} 
   <a class="project-title" href="{{ "/diagnostic-de-resilience/" | relative_url }}">
     <h2>
       Outil de diagnostic de résilience

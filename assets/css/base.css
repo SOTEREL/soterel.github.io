@@ -14,6 +14,15 @@ strong {
   font-weight: normal;
 }
 
+.logo {
+  font-weight: bold;
+  color: #2f7c29;
+  font-size: 1.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "McLaren", Helvetica;
+}
+
 header {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -35,12 +44,6 @@ header a {
 header a:hover,
 header a:focus {
   color: #2f7c29;
-}
-
-header .logo {
-  font-weight: bold;
-  color: #2f7c29;
-  font-size: 1.4em;
 }
 
 header .project-title {

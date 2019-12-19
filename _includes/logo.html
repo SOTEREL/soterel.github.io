@@ -1,0 +1,7 @@
+<a class="logo" href="{{ "/" | relative_url }}">
+  {% if site.logo and site.logo != "" %}
+    <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</a>

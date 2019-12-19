@@ -2,9 +2,20 @@
 title: "Design permacole"
 description: "Outil numérique d'aide au design permacole."
 header: "header_design_permacole.html"
+style: |
+  .members {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 ---
 
 <h1><span>É</span>quipe</h1>
 
-* SOTEREL
-* divers permaculteurs
+<div class="members">
+  {% include logo.html %}
+  <a href="https://campus-transition.org/">
+    <img src="{{ "/assets/img/campus_transition.png" | relative_url }}" alt="Campus de la Transition" />
+  </a>
+</div>
