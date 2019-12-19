@@ -29,7 +29,7 @@ header.project {
 header a {
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "McLaren", cursive;
+  font-family: "McLaren", Helvetica;
 }
 
 header a:hover,
@@ -79,7 +79,7 @@ header nav li {
   text-align: center;
   margin: 0px;
   margin-bottom: 30px;
-  font-family: "McLaren", cursive;
+  font-family: "McLaren", Helvetica;
   font-weight: normal;
   font-size: 2em;
 }
@@ -89,7 +89,7 @@ header nav li {
 }
 
 #content h2 {
-  font-family: "McLaren", cursive;
+  font-family: "McLaren", Helvetica;
   font-weight: normal;
   font-size: 1.5em;
 }

@@ -3,8 +3,8 @@ title: "Design permacole"
 description: "Outil numérique d'aide au design permacole."
 header: "header_design_permacole.html"
 css:
-  - /assets/css/infobox.css
   - /assets/css/quotation.css
+  - /assets/css/section.css
 style: |
   #content > p, ul.contributing {
     max-width: 600px;
@@ -15,6 +15,21 @@ style: |
     text-indent: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .sections {
+    max-width: 600px;
+    grid-row-gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .sections strong {
+    text-align: right;
+    padding-right: 15px;
+  }
+
+  .sections p {
+    margin: 0px;
   }
 
   ul.contributing {
@@ -42,7 +57,7 @@ style: |
   }
 
   .more-features a {
-    font-family: "McLaren", cursive;
+    font-family: "McLaren", Helvetica;
     text-decoration: none;
     text-transform: uppercase;
     color: #2f7c29;
@@ -54,6 +69,12 @@ style: |
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 25px 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    .sections strong {
+      text-align: center;
+    }
   }
 ---
 
@@ -73,25 +94,27 @@ style: |
 Cet outil aide à les stocker, les visualiser et les croiser, ainsi qu’à présenter le travail effectué. <strong>Il a pour but de fluidifier et de structurer le processus de design, sans pour autant se substituer ni à l'analyse des objectifs et du contexte, ni à la conception par les divers acteurs.</strong> L’objectif est de parvenir à un design :
 </p>
 
-<p>
-  <strong>Complet.</strong>
-  Nous souhaitons inciter à suivre les principales phases du design et notamment à bien définir le projet et à analyser le contexte.
-</p>
+<div class="sections">
+  <strong>Complet</strong>
+  <p>
+    Nous souhaitons inciter à suivre les principales phases du design et notamment à bien définir le projet et à analyser le contexte.
+  </p>
 
-<p>
-  <strong>Présentable.</strong>
-  Nous souhaitons rendre la présentation du design (aux habitants, aux élus…) simple et claire, et notamment permettre de créer facilement des cartes esthétiques et documentées.
-</p>
+  <strong>Collaboratif</strong>
+  <p>
+    Nous souhaitons faciliter le travail à plusieurs et encourager l’inclusion des habitants du lieu dans la démarche, notamment durant la phase d'observation.
+  </p>
 
-<p>
-  <strong>Évolutif.</strong>
-  Nous souhaitons que le design puisse être facilement mis à jour au cours du temps, au fil des travaux, erreurs et évènements inattendus.
-</p>
+  <strong>Évolutif</strong>
+  <p>
+    Nous souhaitons que le design puisse être facilement mis à jour au cours du temps, au fil des travaux, erreurs et évènements inattendus.
+  </p>
 
-<p>
-  <strong>Collaboratif.</strong>
-  Nous souhaitons faciliter le travail à plusieurs et encourager l’inclusion des habitants du lieu dans la démarche.
-</p>
+  <strong>Présentable</strong>
+  <p>
+    Nous souhaitons rendre la présentation du design (aux habitants, aux élus…) simple et claire, et notamment permettre de créer facilement des cartes esthétiques et documentées.
+  </p>
+</div>
 
 <p>
 Nous introduisons notre problématique plus en profondeur <a href="{{ "/design-permacole/problematique" | relative_url }}">ici</a>. Concrètement, cet outil permettra, entre autres :

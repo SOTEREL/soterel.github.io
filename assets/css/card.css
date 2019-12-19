@@ -9,7 +9,7 @@
   text-decoration: none;
   display: block;
   font-size: 1.2em;
-  font-family: "McLaren", cursive;
+  font-family: "McLaren", Helvetica;
   color: #000;
   margin: 0px;
 }
@@ -46,7 +46,7 @@
 
 .card .read-more a {
   text-decoration: none;
-  font-family: "McLaren", cursive;
+  font-family: "McLaren", Helvetica;
   text-transform: uppercase;
   color: #2f7c29;
   font-size: 0.9em;
