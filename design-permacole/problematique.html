@@ -2,10 +2,216 @@
 title: "Design permacole"
 description: "Outil numérique d'aide au design permacole."
 header: "header_design_permacole.html"
+css:
+  - /assets/css/quotation.css
+style: |
+  #content h2, #content > p, #content > ul {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  #content > p:not([class]) {
+    text-indent: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul:not(.map-elements) li {
+    margin: 10px 0px;
+  }
+
+  .design-example {
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .design-example  figcaption {
+    font-size: 12px;
+  }
+
+  .voolradime {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    max-width: 600px;
+    margin: 15px auto 5px auto;
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .voolradime > * {
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    padding: 5px;
+  }
+
+  .voolradime .letter {
+    font-weight: bold;
+  }
+
+  .voolradime .description {
+    border-right: 1px solid #dfdfdf;
+  }
+
+  .source {
+    text-align: center;
+    font-size: 11px;
+  }
 ---
 
 <h1><span>P</span>roblématique</h1>
 
-* ce qu'est le design permacole
-* problèmes avec design papier et outils existants
-* état de l'art
+<h2>La méthode de design en permaculture</h2>
+
+{% capture quotation %}
+La méthode de design en <a href="{{ "/concepts#permaculture" | relative_url }}">permaculture</a> permet de concevoir et mettre en place des systèmes durables, autonomes et performants. En s’inspirant de la nature, on cherche à créer des synergies entre les éléments d’un système pour optimiser l’usage des ressources et de l’énergie, tout en respectant les limites des individus et de l’environnement dans lequel il s’inscrit. La réflexion se veut largement <a href="{{ "/concepts#systemique" | relative_url }}">systémique</a>.
+{% endcapture %}
+
+{% include quotation.html
+  text=quotation
+%}
+
+<p>
+Très souvent, les systèmes conçus sont des lieux qu’on souhaite aménager (une maison, une ferme, un hameau, un village...), même si la méthode de design peut aussi se suivre pour concevoir des organisations humaines ne s’incarnant pas sur un site particulier. L’aménagement se fait alors dans la plupart des cas à l’aide d’une carte, appelée plan directeur, sur laquelle on place à la fois des observations sur le site et des éléments à y intégrer. Par exemple :
+</p>
+
+<ul class="map-elements">
+  <li>Surface des bâtiments existants ;</li>
+  <li>Zones d’ensoleillement par saison ;</li>
+  <li>Trajets suivis régulièrement par les habitants ;</li>
+  <li>Zones inondables ;</li>
+  <li>Mares à creuser pour collecter l’eau de pluie et favoriser la biodiversité ;</li>
+  <li>Potager à créer pour assurer un minimum d’autonomie alimentaire ;</li>
+  <li>Parcelles à délimiter pour le pâturage des animaux ;</li>
+  <li>...</li>
+</ul>
+
+<figure class="design-example">
+  <img src="{{ "/assets/img/design_example.jpg" | relative_url }}" alt="Exemple de plan directeur." />
+  <figcaption>Exemple de plan directeur. Source : <a href="https://www.veryediblegardens.com.au/permaculture-design/">Very Edible Gardens</a></figcaption>
+</figure>
+
+<p>
+Le plan directeur n’est néanmoins qu’une partie de la méthode de design. Si chaque permaculteur s’approprie cette stratégie à sa manière, elle suit néanmoins dans les grandes lignes quatre phases successives, chacune décomposable en phases intermédiaires. Nous reprenons ici le modèle VOOLRADIME introduit par Grégory Derville dans son excellent ouvrage <i>La Permaculture</i> :
+</p>
+
+<div class="voolradime">
+  <strong style="grid-row-start: 1; grid-row-end: 3;">Définir où l’on veut aller</strong>
+  <span class="name"><span class="letter">V</span>ision</span>
+  <span class="description">Comment ai-je envie que soit ma vie, ma maison, mon terrain dans quelques années ?</span>
+  <span class="name"><span class="letter">O</span>bjectifs</span>
+  <span class="description">Comment traduire ma vision en objectifs concrets, réalistes et mesurables ?</span>
+
+  <strong style="grid-row-start: 3; grid-row-end: 6;">Connaître précisément son contexte</strong>
+  <span class="name"><span class="letter">O</span>bservation</span>
+  <span class="description">Quelles sont les caractéristiques du site sur lequel j’envisage de réaliser mon projet ?</span>
+  <span class="name"><span class="letter">L</span>imites</span>
+  <span class="description">Qu’est-ce qui pourrait m’empêcher de réaliser mon projet ?</span>
+  <span class="name"><span class="letter">R</span>essources</span>
+  <span class="description">Sur quoi vais-je pouvoir m’appuyer pour réaliser mon projet ?</span>
+
+  <strong style="grid-row-start: 6; grid-row-end: 8;">Dessiner son projet</strong>
+  <span class="name"><span class="letter">A</span>nalyse</span>
+  <span class="description">Comment mettre de l’ordre dans toutes cette masse d’informations ?</span>
+  <span class="name"><span class="letter">D</span>esign</span>
+  <span class="description">Comment positionner les différents éléments de façon pertinente ?</span>
+
+  <strong style="grid-row-start: 8; grid-row-end: 11;">Mettre en oeuvre le projet sur le terrain, le faire fonctionner et l’améliorer</strong>
+  <span class="name"><span class="letter">I</span>nstallation</span>
+  <span class="description">Comment mettre en oeuvre concrètement le design du site ?</span>
+  <span class="name"><span class="letter">M</span>aintenance</span>
+  <span class="description">Comment planifier dès aujourd’hui le travail qu’il faut fournir pour faire fonctionner mon système ?</span>
+  <span class="name"><span class="letter">E</span>volution</span>
+  <span class="description">Mon système fonctionne-t-il bien ? Que peut-on améliorer ?</span>
+</div>
+
+<div class="source">
+  Grégory Derville, “Le design permaculturel” dans <i>La Permaculture</i>. Terre vivante, 2018, p. 161
+</div>
+
+<p>
+Et ce processus est itératif : les objectifs peuvent évoluer, les observations se complètent au fil du temps et la conception et la mise en place s’adaptent aux erreurs et aux limites (physiques, financières, humaines…). <strong>Un design est un processus évolutif, non figé.</strong>
+</p>
+
+<h2>Une méthode complexe</h2>
+
+<p>
+Concevoir le lieu et dessiner le plan directeur est gratifiant car donne tout de suite l’impression de résoudre des problèmes, ce que le cerveau affectionne particulièrement. Les phases préalables de définition du projet et d’observation du site sont donc parfois négligées, notamment quand on débute et n’a pas encore assimilé leur importance. Pourtant, bien définir les problèmes à résoudre, oublier ceux superflus et identifier les ressources et limites attachées à notre contexte permet par la suite des gains d’efficacité importants et un projet plus cohérent sur le long terme.
+</p>
+
+<p>
+Cet écueil illustre le fait que <strong>la méthode de design est exigente</strong>. Elle demande de prendre son temps pour définir ses objectifs et analyser son contexte, des connaissances dans divers domaines (alimentation, bâtiment, eau...) pour créer des synergies entre les éléments et mener les travaux, des compétences pédagogiques pour inclure les habitants du lieu dans les réflexions, de manipuler de nombreuses informations de natures diverses (textes, cartes, statistiques, etc.)… Notamment, la méthode de design pose les questions suivantes :
+</p>
+
+<ul>
+  <li>Comment s’assurer qu’on <strong>ne néglige pas les phases de définition et d’observation</strong> ?</li>
+  <li>Comment <strong>travailler à plusieurs</strong> efficacement ? Et notamment, comment inclure les habitants du lieu, potentiellement non formés à la permaculture ?</li>
+  <li>Comment obtenir un <strong>design évolutif</strong>, qu’on puisse mettre à jour au cours du temps et transmettre à d’autres personnes ? En particulier, comment le documenter ?</li>
+  <li>Comment <strong>présenter le design</strong> (aux habitants du lieu, aux élus du village, à d’éventuels donateurs…) ? Notamment, comment le rendre esthétique sans passer trop de temps sur le dessin ?</li>
+</ul>
+
+<h2>Guider dans le processus de design</h2>
+
+<p>
+<strong>Aujourd’hui, il n’existe à notre connaissance pas d’outil sous licence libre d’aide au design permacole, intégrant la plupart des phases décrites précédemment.</strong> Chacun travaille selon ses préférences, à l’aide de méthodes d’intelligence collective et d’outils divers, numériques ou non. Pour autant, s’assurer que la plupart des questions ont été soulevées et que la plupart des observations ont été prises en compte demande un inventaire méticuleux, qu’il peut être laborieux de faire, surtout quand on manque d’expérience.
+</p>
+
+<p>
+À l’instar d’ouvrages comme <i>La permaculture en pratique</i> de Jessi Bloom, David Boehnlein et Paul Kearsley, <i>La Permaculture</i> de Grégory Derville ou <i>Méthodologie et outils clefs du design en permaculture</i> de Benjamin Broustey et Christophe Curci, nous cherchons avec cet outil à guider les réflexions tout au long du design, sans oublier que chaque projet, contexte et permaculteur sont uniques et que le processus ne peut se standardiser complètement.
+</p>
+
+<h2>Visualiser et présenter facilement l’information</h2>
+
+<p>
+Pour ce qui est du plan du lieu, sur lequel on place à la fois des observations et des éléments à intégrer, il se fait la plupart du temps soit sur papier, soit avec des logiciels de graphisme ou de cartographie universels.
+</p>
+
+<p>
+Le format papier permet une grande flexibilité sur l’esthétisme et dessiner est souvent considéré ludique et agréable à pratiquer en groupe. Ces plans ont aussi l’avantage de consommer relativement peu de ressources et de faire intervenir des outils maîtrisés par beaucoup (des crayons, des calques...). Seulement, dessiner peut parfois s’avérer laborieux et pas toujours aussi collaboratif que souhaité. Il n’est en outre pas simple de rendre le plan interactif (on s’en sort plus ou moins facilement avec des calques) et notamment de représenter l’information sans surcharger la carte. Enfin, un plan papier est assez peu évolutif : une fois une mare dessinée, il n’est pas simple de la déplacer voire de la supprimer si sa pertinence ou sa faisabilité sont remises en question.
+</p>
+
+<p>
+Le format numérique permet plus de flexibilité au niveau de l’édition et de la visualisation. Pour autant, on perd le côté ludique et low tech du dessin au crayon. Obtenir un rendu esthétique demande du temps et de maîtriser des logiciels de graphisme, alors que des éléments apparaissent dans beaucoup de designs (flux, zones, secteurs, mares...) et pourraient être intégrables au plan directement, sans avoir à les dessiner soi-même de zéro. En outre, de tels logiciels manipulent de l’information principalement graphique, sans grande possibilité de détailler les caractéristiques des éléments. Les applications de cartographie permettent de leur attacher un peu plus d’informations (position, dimensions…) mais le dessin est alors plus laborieux et moins esthétique.
+</p>
+
+<p>
+Dans ces deux cas numériques, les outils ne permettent de manipuler que le plan directeur et non pas les informations connexes (définition du projet, données pluviométriques, histoire du lieu…). Enfin, naviguer entre de multiples vues du plan (flux, éléments relatifs à l’eau, éléments prévus pour l’année suivante… chaque élément pouvant appartenir à plusieurs vues) demande de bien organiser les calques, ce qui prend du temps et n’est pas toujours aussi flexible que souhaité.
+</p>
+
+{% capture quotation %}
+Avec cet outil, nous souhaitons fournir une interface simple d’usage pour suivre l’ensemble des grandes phases du design et créer un plan directeur esthétique et documenté. Pour autant, nous ne voulons pas réinventer la roue et renverrons aussi les permaculteurs vers des outils existants (il en existe notamment de nombreux pour planifier la mise en place du projet).
+{% endcapture %}
+
+{% include quotation.html
+  text=quotation
+%}
+
+<p>
+Autant que possible, nous souhaitons que l’outil serve <strong>à plusieurs échelles et dans divers contextes</strong>, au <a href="{{ "/concepts#echelle-locale" | relative_url }}">niveau local</a> (approximativement du hameau à la commune).
+</p>
+
+<h2>Une technologie appropriée ?</h2>
+
+<p>
+En permaculture, on se demande souvent si un outil est approprié en se basant sur trois critères :
+</p>
+
+<ul>
+  <li><strong>Faible impact écologique :</strong> peu consommateur en énergie et en matériaux, peu polluant, recyclable</li>
+  <li><strong>Accessibilité :</strong> peu coûteux, facile à comprendre, à fabriquer et à prendre en main</li>
+  <li><strong>Pertinence par rapport au contexte et aux objectifs</strong></li>
+</ul>
+
+<p>
+Ce qu’on met derrière « peu » et « facile » est bien sûr subjectif, en revanche le numérique ne semble intuitivement pas rentrer dans ces catégories.
+</p>
+
+<p>
+Sur le plan environnemental, <strong>le matériel demande notamment l’extraction de métaux et leur transport, tandis que l’usage est gourmand en électricité</strong>, aujourd’hui principalement dérivée des énergies fossiles au niveau mondial (mais pas en France). Ces constats sont largement détaillés par <a href="https://ecoinfo.cnrs.fr/">EcoInfo</a> et <a href="https://www.greenit.fr/">GreenIT</a>. Pour <strong>tendre vers la sobriété matérielle et logicielle</strong>, nous souhaitons que cet outil requière une puissance de calcul et une capacité de stockage minimales, ainsi que limiter les flux de données et notamment rendre l’outil aussi fonctionnel que possible sans accès à Internet.
+</p>
+
+<p>
+L’accessibilité du numérique n’est pas non plus excellente. <strong>Peu de personnes sont capables de réparer un ordinateur, et encore moins d’en construire un.</strong> De plus, si la majorité des occidentaux savent utiliser ces machines, en programmer une demande un temps de formation non négligeable. Nous souhaitons que cet outil soit à la fois <strong>sous licence libre et open-source</strong>, de sorte que le plus grand nombre puisse l’utiliser, en analyser le code et y contribuer. Nous veillerons également à ce que les façons pour l’outil d’émettre d’éventuelles suggestions et alertes soient documentées, de sorte qu’il soit facile de reproduire ces comportements en dehors de l’application (si on préfère papier et crayons par exemple).
+</p>
+
+<p>
+Malgré ces inconvénients, nous estimons qu’un tel outil est pertinent. Comme expliqué précédemment, nous pensons qu’il peut rendre le processus de design plus efficace et plus accessible à des personnes non formées à la permaculture. <strong>Nous sommes bien sûr curieux de vos retours sur cette hypothèse, que vous pouvez nous faire <a href="{{ "/a-propos#contact" | relative_url }}">ici</a>.</strong>
+</p>
