@@ -6,7 +6,7 @@ css:
   - /assets/css/quotation.css
   - /assets/css/section.css
 style: |
-  #content > p, ul.contributing {
+  #content > p, .contributing, .planning {
     max-width: 600px;
     margin: auto;
   }
@@ -32,7 +32,7 @@ style: |
     margin: 0px;
   }
 
-  ul.contributing {
+  .contributing {
     margin-top: 20px;
   }
 
@@ -69,6 +69,10 @@ style: |
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 25px 0;
+  }
+
+  .planning li {
+    margin: 20px 0;
   }
 
   @media screen and (max-width: 600px) {
@@ -137,7 +141,12 @@ Nous introduisons notre problématique plus en profondeur <a href="{{ "/design-p
 Le projet est en cours de définition, le développement informatique n’a pas commencé. Il se veut itératif et en forte interaction avec des permaculteurs et des habitants de lieux à échelle locale (hameaux, micro-fermes, villages…). Nous envisageons de suivre les phases suivantes :
 </p>
 
-TODO
+<ol class="planning">
+  <li><strong>Première maquette d’éco-lieu :</strong> pour identifier en premier lieu les informations pertinentes et les façons de les structurer et de les présenter, nous mettrons sous forme numérique le design permacole d'un éco-lieu et collecterons des retours, en procédant par petites itérations. Le design pourra uniquement être consulté et non pas édité. L’échelle de l’éco-lieu est assez représentative de ce que nous souhaitons obtenir à long terme, tout en étant plus simple à appréhender qu’un village par exemple.</li>
+  <li><strong>Application :</strong> la maquette nous aura permis d’identifier un ensemble de fonctionnalités pertinentes et les façons de les présenter. Nous commencerons alors à développer l’application sous licence libre permettant de produire facilement ce type de designs numériques.</li>
+  <li><strong>Seconde maquette d’éco-lieu :</strong> pour nous assurer de la pertinence de l’outil dans divers contextes, nous reproduirons ce travail sur un autre éco-lieu, en complétant dans le même temps les fonctionnalités de la première maquette.</li>
+  <li><strong>Maquette de village :</strong> pour nous assurer que l’outil est aussi utile pour l’aménagement des communes, nous mettrons sous forme numérique un design à cette échelle.</li>
+</ol>
 
 <p>
 Le projet vous intéresse ? Vous pouvez nous contacter <a href="{{ "/a-propos#contact" | relative_url }}">ici</a>. Nous sommes ouverts aux diverses contributions :
