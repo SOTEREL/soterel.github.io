@@ -2,78 +2,320 @@
 title: "Constats"
 description: "Proximité du pic pétrolier, changement climatique, destruction des écosystèmes, inégalités sociales... nos territoires et leurs habitants sont mis sous tension et le seront de plus en plus. Il est urgent de les rendre à la fois résilients et soutenables."
 css:
-  - /assets/css/section.css
   - /assets/css/infobox.css
-  - /assets/css/section_page.css
+style: |
+  #content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #content > p, .resources > p {
+    text-indent: 30px;
+  }
+
+  .resources {
+    margin-bottom: 50px;
+  }
+
+  .resources ul {
+    margin: 0px;
+  }
+
+  .resources ul li {
+    margin: 10px 0px;
+  }
+
+  .resources .infobox {
+    max-width: 600px;
+    margin: auto;
+  }
 ---
 
 <h1><span>C</span>onstats</h1>
 
-<div class="introduction">
-  Cette page dresse un petit bilan, partiel, de l'état de notre planète. Nous avons retenu l'information qui nous a le plus marqués. Pour des vues d'ensemble complémentaires, nous vous conseillons les ressources suivantes :
+<div class="resources">
+  <p>
+  Cette page ne dresse qu'un petit bilan, partiel, de l'état de notre planète. Nous avons retenu l'information qui nous a le plus marqués. Pour des vues d'ensemble complémentaires, nous vous conseillons les ressources suivantes :
+  </p>
 
-  <ul>
-    <li>Pablo Servigne et Raphaël Stevens, <i>Comment tout peut s'effondrer</i>, Éditions du Seuil, 2015.</li>
-    <li>Philippe Bihouix, <i>L'Âge des low tech</i>, Éditions du Seuil, 2014.</li>
-    <li>François Gemenne et Aleksandar Rankovic, <i>Atlas de l’Anthropocène</i>, Presses de Sciences Po, 2019.</li>
-    <li>Arthur Keller, <a href="https://www.youtube.com/watch?v=_42nPGtJ7LE">Construire des espoirs lucides pour le futur</a>, 2019.</li>
-    <li>Emmanuel Prados, <a href="https://www.youtube.com/watch?v=1dgjIeR5DBY">Comprendre les phénomènes d’effondrement de sociétés. Quel avenir pour la nôtre ?</a>, 2017.</li>
-  </ul>
+  {% capture resources %}
+    <ul>
+      <li>François Gemenne et Aleksandar Rankovic, <i>Atlas de l’Anthropocène</i>, Presses de Sciences Po, 2019.</li>
+      <li>Pablo Servigne et Raphaël Stevens, <i>Comment tout peut s'effondrer</i>, Éditions du Seuil, 2015.</li>
+      <li>Philippe Bihouix, <i>L'Âge des low tech</i>, Éditions du Seuil, 2014.</li>
+      <li>Arthur Keller, <a href="https://www.youtube.com/watch?v=_42nPGtJ7LE">Construire des espoirs lucides pour le futur</a>, 2019.</li>
+      <li>Jean-Marc Jancovici, <a href="https://www.youtube.com/watch?v=xgy0rW0oaFI&list=PLMDQXkItOZ4LPwWJkVQf_PWnYHfC5xGFO">Cours des Mines</a>, 2019.</li>
+      <li>Emmanuel Prados, <a href="https://www.youtube.com/watch?v=1dgjIeR5DBY">Comprendre les phénomènes d’effondrement de sociétés. Quel avenir pour la nôtre ?</a>, 2017.</li>
+    </ul>
+  {% endcapture %}
+  {% include infobox.html
+    title="Ressources complémentaires"
+    description=resources
+  %}
 </div>
 
-* pourquoi échelle communale ?
-* mentionner des prédictions (ex : GIEC) mais aussi des trucs qui arrivent déjà et qu'on peut percevoir (manques d'eau, stagnation des rendements...)
+<h2>De l'énergie en abondance</h2>
 
-<div class="sections">
-  <h2 id="pic-petrolier">Pic pétrolier</h2>
-  <div class="content">
-    {% capture resources %}
-      <ul class="resources">
-        <li></li>
-      </ul>
-    {% endcapture %}
-    {% include infobox.html
-      title="Ressources complémentaires"
-      description=resources
-    %}
-  </div>
+<p>
+Dans les pays dits développés, notre confort a largement augmenté ce dernier siècle. <strong>Cette hausse, nous la devons aux machines</strong> : les engins agricoles remplacent humains et animaux de trait ; les bâteaux, les trains et les camions acheminent des marchandises produites à l’autre bout du pays, voire du globe ; les appareils électroménagers nous épargnent nombreuses corvées ; le numérique fluidifient nos communications ; les engins de chantier démultiplient notre force...
+</p>
 
-  <h2 id="changement-climatique">Changement climatique</h2>
-  <div class="content">
-    {% capture resources %}
-      <ul class="resources">
-        <li></li>
-      </ul>
-    {% endcapture %}
-    {% include infobox.html
-      title="Ressources complémentaires"
-      description=resources
-    %}
-  </div>
+<p>
+<strong>Or toutes ces machines demandent de l’énergie</strong> (les véhicules ne démarrent pas sans pétrole, les ordinateurs restent éteints sans électricité...). Notre gain de confort se retrouve dans la quantité totale d’énergie consommée par l’humanité, qui a tout bonnement explosé ce dernier siècle :
+</p>
 
-  <h2 id="destruction-des-ecosystemes">Destruction des écosystèmes</h2>
-  <div class="content">
-    {% capture resources %}
-      <ul class="resources">
-        <li></li>
-      </ul>
-    {% endcapture %}
-    {% include infobox.html
-      title="Ressources complémentaires"
-      description=resources
-    %}
-  </div>
+{% include figure.html
+  img="/assets/img/world_energy_consumption.png"
+  alt="Consommation d'énergie mondiale depuis 1860."
+  source_url="https://jancovici.com/transition-energetique/l-energie-et-nous/a-quoi-ressemble-notre-consommation-energetique-actuellement/"
+  source_text="jancovici.com"
+%}
 
-  <h2 id="inegalites-sociales">Inégalités sociales</h2>
-  <div class="content">
-    {% capture resources %}
-      <ul class="resources">
-        <li></li>
-      </ul>
-    {% endcapture %}
-    {% include infobox.html
-      title="Ressources complémentaires"
-      description=resources
-    %}
+<p>
+Comme on peut le constater, <strong>cette forte croissance est due à l’exploitation des énergies fossiles</strong> (charbon, pétrole et gaz). Elle a commencé avec le charbon et sa fameuse machine à vapeur à la fin du XVIIIè siècle puis s’est accélérée dans les années 50 avec le pétrole, puis le gaz. Les énergies fossiles représentent aujourd’hui 80% de la consommation mondiale et cette proportion n’a pas diminué ces trente dernières années, malgré les incitations multiples à la transition énergétique.
+</p>
+
+<p>
+Par rapport au bois, au vent et à l’eau, principales énergies de l’humanité jusqu’à la fin du XVIIIè siècle, <strong>ces énergies fossiles sont à la fois denses, abondantes, facilement transportable, facilement entreposables et peu coûteuses</strong>. L’exemple emblématique en est le bidon de pétrole : transportable à bout de bras, il coûte quelques euros seulement et contient pourtant suffisamment d’énergie pour alimenter une tractopelle, avec laquelle on peut abattre une maison en un rien de temps. Ces énergies fossiles peuvent également être converties en d’autres formes d’énergie (électrique, thermique…). Les premières sont dites primaires, les secondes… secondaires.
+</p>
+
+<p>
+Toute cette énergie et toutes ces machines pour la transformer en travail utile (creuser, tracter, transporter…) font de nous, occidentaux, de véritables <a href="https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/">esclavagistes modernes</a> : au travers des véhicules, des appareils électroménagers, des machines industrielles, etc., <strong>chaque français bénéficie en moyenne de l’énergie fournie par environ... 400 esclaves</strong> ! Voyez ce que permet un « bête » grille-pain par rapport à un humain :
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S4O5voOCqAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+
+<p>
+Remarquons qu’il n’est pas uniquement question d’énergie, <strong>mais aussi et surtout de puissance</strong>. Pour préparer une tartine, un grille-pain consomme environ <a href="https://fr.wikipedia.org/wiki/Grille-pain#Consommation_d'%C3%A9nergie">1000W pendant 2 minutes</a>, soit environ 33Wh. Nous humains consommons autour de 5000Wh pour 8h de travail physique, soit autant d’énergie qu’il en faut à un grille-pain pour préparer 150 tartines.
+</p>
+
+<p>
+Pourtant, nous constatons très bien dans la vidéo du cycliste qu’en griller ne serait-ce qu’une n’est pas à la portée de tout le monde, parce que demande une puissance que nous peinons à déployer. <strong>Les énergies fossiles nous permettent de nous affranchir de cette limite du fait de leur incroyable densité énergétique.</strong> Rendons-nous bien compte : le pétrole, par exemple, est l’aboutissement de plusieurs millions d’années de décomposition de matière organique, condensant sous forme liquide (une partie de) l’énergie solaire collectée pendant tout ce temps par lesdits organismes.
+</p>
+
+<p>
+<strong>De nombreuses machines ne peuvent fonctionner que parce que nous bénéficions de cette puissance.</strong> C’est le cas notamment des véhicules, et tout particulièrement des machines agricoles. De la métallurgie également, parce qu’elle demande de chauffer à très haute température. Etc.
+</p>
+
+<h2>Une consommation frénétique</h2>
+
+<p>
+Avec ces machines et cette énergie en abondance et à faible coût (par rapport à du travail humain), accompagnées de la massification des annonces publicitaires et de l’accaparement des moyens de production par le grand capital, <strong>le niveau de consommation de la partie la plus riche de l’humanité a explosé</strong> (en même temps que la population elle-même).
+</p>
+
+<p>
+Des scientifiques ont mesuré cette évolution dans le cadre du Programme International Géosphère Biosphère (<i>International Geosphere-Biosphere Programme</i>, IGBP). Conclusion : tout s’accélère depuis le milieu du XXè siècle, à tel point que ce phénomène a été qualifié de <a href="http://www.igbp.net/globalchange/greatacceleration.4.1b8ae20512db692f2a680001630.html">Grande Accélération</a> :
+</p>
+
+{% include figure.html
+  img="/assets/img/great_acceleration_socio_economic.png"
+  alt="La Grande Accélération"
+  source_url="http://www.igbp.net/globalchange/greatacceleration.4.1b8ae20512db692f2a680001630.html"
+  source_text="IGBP"
+%}
+
+<p>
+Non seulement la population mondiale a été multipliée par quatre en moins de cent ans, mais <strong>la consommation par habitant a aussi fortement augmenté en moyenne</strong> (ce qui cache bien sûr de grandes inégalités). <a href="http://www.fao.org/faostat/en/#data/CL/visualize">La consommation de viande</a> par personne a doublé entre 1960 et 2013, tout comme celle de nourriture marine. En France, le <a href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm">PIB par habitant</a> est passé de 1800 dollars en 1960 à 45 000 dollars en 2018. Côté <a href="https://data.oecd.org/transport/passenger-transport.htm">transport</a>, les français faisaient au total 330 000 kilomètres en voiture en 1970 contre 815 000 en 2018.
+</p>
+
+<p>
+<strong>En outre, comme transporter ne coûtait et ne coûte toujours quasiment rien, les usines se sont fortement spécialisées</strong> pour <a href="https://fr.wikipedia.org/wiki/Organisation_scientifique_du_travail">baisser les coûts de production</a>. La contrepartie est d’acheminer les pièces d’un site à l’autre entre chaque opération (découpage de l’acier, peinture, assemblage, vente...) et donc d’avoir des infrastructures suffisantes (chemins de fer, autoroutes, ports...). En 1970, la France faisait <a href="https://data.oecd.org/transport/container-transport.htm">transiter sur la mer</a> 1 500 000 tonnes de biens par conteneur, contre 48 000 000 tonnes en 2018. Sur les rails, nous sommes passés de 2 400 000 tonnes à 13 000 000 tonnes.
+</p>
+
+<p>
+<strong>Les lieux de production (approximativement les campagnes et les pays dits en voie de développement) et ceux de consommation (approximativement les villes et les pays dits développés) se sont éloignés du fait de la délocalisation des industries et de l’exode rural.</strong> Selon le Programme des Nations Unies pour le développement, <a href="https://www.undp.org/content/undp/fr/home/sustainable-development-goals/goal-11-sustainable-cities-and-communities.html">55% de la population mondiale vit dans des villes</a>. Il est estimé que cette proportion sera de 66% en 2050. De son côté, la Commission Européenne estime que <a href="https://ghsl.jrc.ec.europa.eu/documents/Atlas_of_the_Human_Planet_2018_executivesummary.pdf?t=1545406246">80% de la population mondiale est urbaine</a>, en se basant sur une autre définition des villes.
+</p>
+
+<p>
+Bien sûr, <strong>ces données mondiales cachent de <a href="http://report.hdr.undp.org/fr/?utm_source=web&utm_medium=homepage&utm_campaign=hdr19">grandes inégalités</a></strong>.
+</p>
+
+<h2>Une pression forte sur l’environnement</h2>
+
+<p>
+<strong>Cette intensification de la consommation demande de l’énergie mais aussi des matières premières et des terres.</strong>
+</p>
+
+<p>
+Parmi les matières premières, on emploie du pétrole pour le plastique, du fer pour l’acier des carrosseries, du sable pour le béton des bâtiments, des métaux pour l’électronique, des animaux pour l’alimentation… Dans son <a href="https://www.resourcepanel.org/reports/global-resources-outlook"><i>Global Resources Outlook 2019</i></a>, le Groupe international d'experts sur les ressources (<i>International Resource Panel</i>) indique que « l’utilisation des ressources a plus que triplé depuis 1970, et continue de croître ». Sur les métaux, on observe une croissance annuelle de 2,7% depuis 1970, soit un doublement tous les 25 ans environ. La consommation de minéraux non métalliques (sable, graviers, argile) a quant à elle été multipliée par presque 5 entre 1970 et 2017, et celle de biomasse par 2,6.
+</p>
+
+<p>
+En outre, l’humanité s’est accaparé énormément de terres autrefois sauvages. Notre consommation frénétique de viande est la cause principale de la déforestation amazonienne (on libère des surfaces pour le bétail, mais aussi pour les cultures nourissant ce bétail). Du fait de l’explosion de la population et de son niveau de consommation, de nombreuses infrastructures ont remplacé des surfaces auparavant non artificialisées : usines de production, logements, infrastructures de transport… Ces dernières se sont particulièrement développées du fait de l’urbanisation et de la délocalisation. La <a href="http://www.fao.org/faostat/en/#data/LC/visualize">surface artificialisée</a> a doublé entre 1992 et 2012 à l’échelle de la planète ainsi qu’en France.  
+</p>
+
+<p>
+Cette accélération des activités humaines se retrouve dans les tendances planétaires observées par l’IGBP :
+</p>
+
+{% include figure.html
+  img="/assets/img/great_acceleration_earth.png"
+  alt="La Grande Accélération"
+  source_url="http://www.igbp.net/globalchange/greatacceleration.4.1b8ae20512db692f2a680001630.html"
+  source_text="IGBP"
+%}
+
+<p>
+<strong>En plus de monopoliser des terres et de consommer des matières premières, nous altérons l’environnement par la pollution.</strong> La plus connue est la pollution plastique, mais nous avons également un problème majeur avec celle aux nitrates : l’azote de synthèse répandu en grandes quantités sur les cultures n’est pas complètement assimilé par les plantes et se retrouve dans les rivières, les fleuves et les océans ; dès lors, des algues se mettent à proliférer, pompant tout l’oxygène de l’eau et créant des zones tout simplement impropres à la vie. On parle d’<a href="https://inra-dam-front-resources-cdn.brainsonic.com/ressources/afile/412484-2dddc-resource-expertise-eutrophisation-resume-8-p.pdf">eutrophisation</a>, comme cette <a href="https://www.nationalgeographic.fr/sciences/2019/06/le-ruissellement-des-engrais-cree-la-plus-grande-zone-morte-jamais-observee-aux">zone morte</a> au Golf du Mexique d’environ 20 000km², soit l’équivalent de deux fois le plus grand département de France métropolitaine (la Gironde).
+</p>
+
+<p>
+<strong>Nous polluons aussi l’atmosphère.</strong> Les gaz à effet de serre que nous émettons par nos activités augmentent la capacité de l’atmosphère à retenir le rayonnement thermique quittant la Terre et contribuent donc au réchauffement de cette dernière. Parmi ces gaz à effet de serre, on retrouve le <a href="https://www.nationalgeographic.fr/environment/2019/04/le-niveau-de-co2-dans-latmosphere-bat-un-record-vieux-de-3-millions-dannees/amp">dioxyde de carbone</a> émis par la combustion des énergies fossiles, mais aussi le méthane (émis notamment par les bovins) et <a href="https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/">divers autres gaz</a>.
+</p>
+
+<p>
+Là encore, tous les pays n’ont pas la même responsabilité. Selon <a href="https://www.oxfam.org/en/research/extreme-carbon-inequality">Oxfam</a>, la moitié la plus pauvre de la population mondiale est responsable de 10% des émissions. À l’opposé, les 10% les plus riches sont à l’origine de 50%.
+</p>
+
+<p>
+<strong>En perturbant l’ensemble du climat, ce réchauffement cause un <a href="https://jancovici.com/changement-climatique/predire-lavenir/un-changement-de-climat-cest-juste-un-changement-de-temperature-moyenne/">changement climatique</a>.</strong> Par exemple, la hausse de la température accélère l’évaporation des mers et océans et influe sur tout le cycle de l’eau, qui l’est déjà par la disparition de grandes régions boisées.
+</p>
+
+<p>
+Pour étudier ces phénomènes, le Groupe d'experts intergouvernemental sur l'évolution du climat (<a href="https://jancovici.com/changement-climatique/croire-les-scientifiques/quest-ce-que-le-giec/">GIEC</a>), une équipe de chercheurs internationale, <strong>compile des centaines de publications scientifiques sur le sujet et les synthétise dans divers rapports</strong>. Il fait notamment des scénarios sur l’évolution de la température :
+</p>
+
+{% capture legend %}
+  Évolution de la température planétaire moyenne.
+  Le zéro correspond à la moyenne entre 1951 et 1980.
+  Les lignes pleines représentent les observations et les reconstitutions.
+  Celles en pointillés représentent les scénarios prospectifs du GIEC.
+  <div>
+  Sources :
+  <a href="https://www.temperaturerecord.org/">https://www.temperaturerecord.org/</a>
+  et
+  <a href="http://www.climatechange2013.org/images/report/WG1AR5_SPM_FINAL.pdf">AR5</a> (p. 21)
   </div>
-</div>
+  <div>
+  Données brutes : <a href="https://chart-studio.plot.ly/~Vayel/36/#data">https://chart-studio.plot.ly/~Vayel/36/#data</a>
+  </div>
+{% endcapture %}
+
+{% include figure.html
+  img="/assets/img/global_temperature.png"
+  alt="Évolution de la température planétaire moyenne, avec les scénarios RCP du GIEC."
+  legend=legend
+%}
+
+<p>
+<a href="https://xkcd.com/1732/">De tels écarts de température ont déjà été observés par le passé</a>, notamment entre le dernier âge glaciaire (il y a environ 20 000 ans) et le climat particulièrement stable et clément dont l’humanité a profité jusqu’à récemment, avec un écart de température moyenne entre +4°C et +5°C. Une telle différence ne rend pas seulement les saisons un peu plus fraîches, <a href="https://jancovici.com/changement-climatique/predire-lavenir/ou-nous-situons-nous-dans-lechelle-des-temperatures-par-rapport-au-passe/">elle impacte l’ensemble du climat et des écosystèmes</a>. Durant le dernier âge glaciaire, la France ressemblait toute l’année au nord de la Sibérie actuelle et le niveau de la mer était 120 mètres plus bas qu’aujourd’hui, du fait d’une couche de glace de plusieurs kilomètres recouvrant l’Amérique et l’Europe du Nord.
+</p>
+
+<p>
+<strong>Or la sortie de l’âge glacaire s’est faite sur plusieurs milliers d’années, permettant aux écosystèmes de progressivement s’adapter.</strong> Quand l’augmentation de température moyenne a lieu sur deux siècles (en 50 à 100 fois moins de temps donc), à quoi peut-on sérieusement s’attendre ? D’autant plus que, si nous avons des exemples « récents » de températures moyennes basses (lors du dernier âge glaciaire), l’inverse nous est très peu connu. En effet, <a href="https://www.nationalgeographic.fr/environment/2019/04/le-niveau-de-co2-dans-latmosphere-bat-un-record-vieux-de-3-millions-dannees/amp">le niveau de CO2 dans l’atmosphère n’a jamais été aussi élevé ces 3 derniers millions d’années</a>. <strong>Cette grande incertitude est également un grand risque.</strong>
+</p>
+
+<p>
+<strong>Tous ces impacts nuisent gravement à la biodiversité</strong>, comme mesuré par la Plateforme intergouvernementale sur la biodiversité et les services écosystémiques (<a href="https://ipbes.net/global-assessment-report-biodiversity-ecosystem-services">IPBES</a>). Le taux d’extinction des espèces et des individus est tel qu’on parle de 6è extinction de masse, la 5è étant celle… des dinosaures par une météorite.
+</p>
+
+<h2>Des limites physiques</h2>
+
+<p>
+Cette pression sur l’environnement est-elle soutenable ? Pour la mesurer, le WWF définit la notion de « <a href="https://www.wwf.fr/jour-du-depassement">jour du dépassement</a> » : le jour de l’année où l’humanité a consommé toutes les ressources que le Terre peut régénérer en un an. Le reste de l’année, nous vivons donc à crédit, puisons dans les stocks et nous privons nous et nos enfants de ressources pour le futur, tout en détruisant le vivant. Autrement dit, ce jour est le moment où nous avons dépensé plus que notre salaire et puisons dès lors dans notre épargne. Tant que nous en avons...
+</p>
+
+<p>
+En 2019, le jour du dépassement mondial a eu lieu le 29 juillet, ce qui signifie qu’il faudrait à l’humanité 1,75 planètes pour vivre durablement de la sorte. Bien sûr, les niveaux de vie diffèrent largement d’une région du globe à l’autre : si tout le monde vivait comme un français moyen, il faudrait à l’humanité non pas 1,75 mais 2,7 planètes. <strong>Rendons-nous compte : le 11 du mois, nous avons déjà dépensé tout notre salaire.</strong>
+</p>
+
+<p>
+De son côté, le Stockholm Resilience Center a défini <a href="https://fr.wikipedia.org/wiki/Limites_plan%C3%A9taires">neuf limites géophysiques</a> à ne pas dépasser, <strong>au risque d’atteindre des points de basculement au niveau du système Terre</strong>, c’est-à-dire des changements brutaux dans son comportement. Par exemple, dans un océan trop acide le plancton peine à se renouveler. Or il est à la base de la chaîne alimentaire marine : sa disparition priverait ses prédateurs de nourriture et induirait donc leur propre disparition, ce qui ferait disparaître les prédateurs de ces prédateurs, etc.
+</p>
+
+<p>
+<strong>Le réchauffement climatique, lui, peut s’auto-entretenir par le bias de ce qu’on appelle des boucles de rétroactions.</strong> La plus connue est celle liée à la fonte de la banquise : plus il fait chaud, plus la banquise fond, plus sa surface diminue, plus les rayons du soleil sont absobés par l’océan plutôt que réfléchis vers l’atmosphère, plus la température moyenne est élevée, plus la banquise fond... Une autre : plus il fait chaud, plus le pergélisol fond, plus il libère le méthane qu’il contient, plus l’effet de serre additionnel est important, plus il fait chaud, plus le pergélisol fond...
+</p>
+
+<p>
+Des experts du climat ont estimé qu’à partir d’un réchauffement de l’ordre de +1,5°C à +2°C par rapport à l’ère pré-industrielle, des boucles de rétroaction aujourd’hui inactives pouvaient se déclencher et induire un emballement du réchauffement, menant à une planète invivable pour l’humain, appelée <a href="https://www.stockholmresilience.org/research/research-news/2018-08-06-planet-at-risk-of-heading-towards-hothouse-earth-state.html">planète étuve</a>. <strong>Or, <a href="https://news.mit.edu/2016/how-much-difference-will-paris-agreement-make-0422">il a été estimé</a> qu’en respectant les Accords de Paris, nous serions à +3.0°C à la fin du siècle.</strong> Et nous ne les respectons même pas...
+</p>
+
+<p>
+Les conséquences modélisées sont catastrophiques : <a href="https://www.ipcc.ch/srocc/">fonte des glaces</a>, <a href="https://coast.noaa.gov/slr/">élévation du niveau des mers</a>, acidification des océans, <a href="https://www.ipcc.ch/srccl/">baisse des rendements</a>, évènements climatiques extrêmes plus fréquents et plus intenses...
+</p>
+
+<p>
+Parmi les limites définies par le Stockholm Resilience Center, l’humanité en a déjà franchies trois : le changement climatique, l’érosion de la biodiversité et la perturbation des cycles biochimiques de l'azote et du phosphore.
+</p>
+
+{% include figure.html
+  img="/assets/img/planetary_boundaries.jpg"
+  legend="Neufs limites planétaires à ne pas dépasser."
+  source_url="https://www.stockholmresilience.org/research/planetary-boundaries/planetary-boundaries/about-the-research/the-nine-planetary-boundaries.html"
+  source_text="Stockholm Resilience Centre"
+%}
+
+<p>
+<strong>Notre consommation de ressources n’est pas non plus soutenable.</strong> Par exemple, une <a href="https://www.nationalgeographic.com/animals/2006/11/seafood-biodiversity/">étude</a> publiée dans Science en 2006 estime que les océans pourraient être vidés d’espèces comestibles d’ici 2048. Les tendances ne se sont clairement pas améliorées depuis...
+</p>
+
+<p>
+<strong>Une autre limite très préoccupante est celle de l’<a href="https://resiliencealimentaire.org/petrole-a-quand-la-disette/">approvisionnement en pétrole</a>.</strong> Aujourd’hui, la partie la plus riche de l’humanité <a href="https://www.resilience.org/stories/2016-09-08/peak-oil-by-any-other-name-is-still-peak-oil/">consomme bien plus de pétrole qu’elle n’en découvre</a>, ce qui ne peut bien évidemment pas durer. Le pétrole mettant des millions d’années à se former, il est considéré en quantité finie à échelle de temps humaine. Mécaniquement, nous devrons au bout d’un moment ne plus en consommer du tout, tout comme nous ne pouvons pas piocher indéfiniment dans un paquet de bonbons.
+</p>
+
+<p>
+En pratique, la courbe d’extraction prend une <a href="https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/">forme de cloche</a>. Le moment où elle s’inverse est appelé le pic pétrolier. Ce pic ne signifie pas qu’il n’y a plus de pétrole du jour au lendemain, mais qu’il sera inéluctablement de moins en moins abondant. Quand on connait son importance pour nos économies occidentales, on peut se demander comment nos sociétés, en particulier notre <a href="https://resiliencealimentaire.org/quest-ce-quun-systeme-alimentaire/">système alimentaire</a>, vont réagir. Notamment, quels seront les impacts sur la géopolitique mondiale ?
+</p>
+
+<p>
+Le pic de pétrole dit conventionnel est déjà passé, aux alentours de 2008. Aujourd’hui, la croissance de la production est uniquement garantie par celle des gisements de pétrole dits non conventionnels. Mais ces derniers sont bien moins facilement accessibles que les gisements conventionnels, si bien que les investissements financiers sont importants et que les entreprises du secteur <a href="https://energieetenvironnement.com/2018/10/23/le-petrole-de-schiste-croule-sous-les-dettes/">s’endettent</a>. En plus de cette vulnérabilité financière, l’Agence Internationale de l’Énergie estime dans un <a href="https://www.iea.org/reports/world-energy-outlook-2018">rapport fin 2018</a> que le pic tous pétroles confondus <a href="https://www.lemonde.fr/blog/petrole/2019/02/04/pic-petrolier-probable-dici-a-2025-selon-lagence-internationale-de-lenergie/">sera atteint d’ici à 2025</a>.
+</p>
+
+<p>
+Remarquons que cette notion de pic est valable pour toutes les ressources non renouvelables (à échelle de temps humaine), et <strong>notamment pour <a href="https://www.lemonde.fr/blog/petrole/2012/05/08/rarefaction-des-metaux-demain-le-peak-all/">tous les métaux</a></strong>.
+</p>
+
+<p>
+<strong>Autrement dit, l’impact de l’humanité sur la planète n’est pas soutenable.</strong> Alors qu’elle nous loge et nous nourrit, nous la déréglons et approchons à grands pas de limites physiques très dangereuses. Principaux responsables de ces changements, il est urgent que les pays dits développés revoient leurs façons de vivre au sein de leur environnement et se préparent aux chocs futurs inévitables.
+</p>
+
+<h2>Résumons</h2>
+
+<p>
+Le niveau de vie et de consommation dans les pays dit développés a largement augmenté ces deux derniers siècles, et nous le devons aux machines : en 2019 en France, chacun de nous bénéficie en moyenne du travail fourni par 400 esclaves, via des machines capables de déployer des puissances incomparables à celles des organismes vivants.
+</p>
+
+<p>
+Ces esclaves se nourissent de pétrole, de gaz, d’électricité… Au niveau mondial, 80% de l’énergie primaire utilisée est fossile : sa combustion émet du dioxyde de carbone et cause un réchauffement climatique qui perturbe l’ensemble du climat sur des échelles temporelles très courtes. Sans changement draconien, les conséquences pour les humains et les écosystèmes seront catastrophiques.
+</p>
+
+<p>
+En plus d’altérer l’atmosphère, l’humanité, notamment sa partie la plus riche, domestique les terres pour l’agriculture, les artificialise pour ses logements et ses infrastructures de transport et de production et émet des pollutions diverses (plastique, pesticides, nitrates, autres gaz à effet de serre…). Les écosystèmes sont soumis à une pression considérable alors qu’ils nous rendent des services indispensables (alimentation, pollinisation, protection des sols de l’érosion, captation du carbone de l’atmosphère, filtration de l’eau...).
+</p>
+
+<p>
+Tout cet appareil productif, destructeur du vivant, se base sur des ressources non renouvelables (métaux, énergies fossiles…) et notamment sur le pétrole. Pour baisser les coûts de production, les usines se sont fortement spécialisées et délocalisées, augmentant ainsi les transports d’un site à l’autre entre chaque opération et entre les lieux de production et de consommation. En outre, pour maximiser les bénéfices pécuniers, l’économie s’est débarrassée des stocks et fonctionne aujourd’hui en flux tendus. Sans transports, elle est à l’arrêt complet. Notamment, la question de la sécurité alimentaire en ville se pose.
+</p>
+
+<p>
+Seulement, le pic pétrolier approche. Bientôt, nos sociétés seront de moins en moins approvisionnées en or noir. Il sera donc indispensable de relocaliser nos activités vers les lieux à ressources (notamment alimentaires), c’est-à-dire les campagnes. Sans même considérer cette raréfaction, le pétrole, ainsi que le gaz et le charbon, devront en grande partie, voire intégralement, disparaître de notre mix énergétique si nous voulons éviter le chaos climatique.
+</p>
+
+<p>
+Or ces énergies fossiles représentent aujourd’hui 80% de celle consommée au niveau mondial. S’en passer, même en partie, revient donc à libérer une part non négligeable de nos 400 esclaves. Pour compenser cette perte inéluctable, nous devrons :
+</p>
+
+<ul>
+  <li>Consommer moins, ce qui diminue par la même occasion les nuisances sur les écosystèmes (accapparement des terres, pollutions...) ;
+  <li>Utiliser d’autres formes d’énergie pour nos machines (mais il n’est pas réaliste d’imaginer qu’elles remplaceront intégralement les fossiles car, du fait de leur densité énergétique moindre et de leur éventuelle intermittence, elles demandent bien plus d’infrastructures, et donc de surface au sol et de matériaux) ;
+  <li>Remplacer une partie des machines par des humains et par les écosystèmes, notamment en agriculture ;
+  <li>Limiter le gaspillage des ressources et de l’énergie en optimisant leur usage.
+</ul>
+
+<p>
+Et nous devrons dans le même temps nous adapter au changement climatique. <strong>Il est donc urgent de mettre en place des systèmes capables d’encaisser ces chocs dans un contexte de descente énergétique et de probables tensions sociales.</strong>
+</p>
+
+<p>
+De telles structures humaines ne pourront être soutenables dans des écosystèmes malades, que nous n’avons jusqu’ici pu compenser qu’à grand renfort d’énergie et de matières premières. <strong>Il est indispensable de restaurer ces écosystèmes.</strong>
+</p>
+
+<p>
+Avec un approvisionnement en pétrole bien moindre, le transport sur de longues distances se raréfiera. Les personnes devront alors se rapprocher des lieux de production, en particulier de celle alimentaire, c’est-à-dire se rapprocher des campagnes. <strong>Puisqu’il sera plus compliqué de commercer avec des personnes éloignées, les communautés humaines devront développer leur autonomie, sans pour autant faire preuve d’autarcie.</strong>
+</p>
+
+<p>
+En effet, dans un monde moins confortable (avec un climat moins clément, un approvisionnement contraint en ressources et moins de machines à notre service), il peut être tentant de s’isoler pour se préparer. Pour autant, l’autonomie parfaite est très peu réaliste et l’autarcie crée un climat propice aux tensions sociales. <strong>Nous devrons plutôt construire des communautés humaines solides, capables d’une entraide efficace en interne, mais aussi avec les voisins.</strong>
+</p>

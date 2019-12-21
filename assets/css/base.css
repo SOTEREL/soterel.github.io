@@ -9,18 +9,9 @@ a {
   color: #000;
 }
 
-strong {
+strong, strong a {
   color: #2f7c29;
   font-weight: normal;
-}
-
-.logo {
-  font-weight: bold;
-  color: #2f7c29;
-  font-size: 1.4em;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "McLaren", Helvetica;
 }
 
 header {
@@ -97,10 +88,6 @@ header nav li {
   font-size: 1.5em;
 }
 
-.spacer {
-  flex-grow: 1;
-}
-
 footer {
   display: flex;
   justify-content: space-between;
@@ -118,6 +105,31 @@ footer a {
 footer a:hover,
 footer a:focus {
   color: #2f7c29;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.logo {
+  font-weight: bold;
+  color: #2f7c29;
+  font-size: 1.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "McLaren", Helvetica;
+}
+
+figure {
+  text-align: center;
+  margin: 0px;
+}
+
+figcaption,
+.legend {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 500px) {

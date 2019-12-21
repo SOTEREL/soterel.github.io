@@ -1,0 +1,27 @@
+{% assign alt = "" %}
+{% if include.alt %}
+  {% assign alt = include.alt %}
+{% elsif include.legend %}
+  {% assign alt = include.legend %}
+{% endif %}
+
+{% assign source = "" %}
+{% if include.source_url and include.source_text %}
+  {% capture source %}
+    Source : <a href="{{ include.source_url }}">{{ include.source_text }}</a>
+  {% endcapture %}
+{% elsif include.source_text %}
+  {% assign source = include.source_text %}
+{% elsif include.source_url %}
+  {% capture source %}
+    Source : <a href="{{ include.source_url }}">{{ include.source_url }}</a>
+  {% endcapture %}
+{% endif %}
+
+<figure class="{{ include.class }}">
+  <img src="{{ include.img | relative_url }}" alt="{{ alt }}" />
+  <figcaption>
+  {{ include.legend }}
+  {{ source }}
+  </figcaption>
+</figure>

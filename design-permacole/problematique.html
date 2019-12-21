@@ -20,20 +20,16 @@ style: |
     margin: 10px 0px;
   }
 
-  .design-example {
+  figure {
     text-align: center;
     margin: 20px 0px;
-  }
-
-  .design-example  figcaption {
-    font-size: 12px;
   }
 
   .voolradime {
     display: grid;
     grid-template-columns: 3fr 2fr 3fr;
     max-width: 600px;
-    margin: 15px auto 5px auto;
+    margin: 15px auto 0px auto;
     border-bottom: 1px solid #dfdfdf;
   }
 
@@ -50,11 +46,6 @@ style: |
   .voolradime .description {
     border-right: 1px solid #dfdfdf;
   }
-
-  .source {
-    text-align: center;
-    font-size: 11px;
-  }
 ---
 
 <h1><span>P</span>roblématique</h1>
@@ -65,9 +56,7 @@ style: |
 La méthode de design en <a href="{{ "/concepts#permaculture" | relative_url }}">permaculture</a> permet de concevoir et mettre en place des systèmes durables, autonomes et performants. En s’inspirant de la nature, on cherche à créer des synergies entre les éléments d’un système pour optimiser l’usage des ressources et de l’énergie, tout en respectant les limites des individus et de l’environnement dans lequel il s’inscrit. La réflexion se veut largement <a href="{{ "/concepts#systemique" | relative_url }}">systémique</a>.
 {% endcapture %}
 
-{% include quotation.html
-  text=quotation
-%}
+{% include quotation.html text=quotation %}
 
 <p>
 Très souvent, les systèmes conçus sont des lieux qu’on souhaite aménager (une maison, une ferme, un hameau, un village...), même si la méthode de design peut aussi se suivre pour concevoir des organisations humaines ne s’incarnant pas sur un site particulier. L’aménagement se fait alors dans la plupart des cas à l’aide d’une carte, appelée plan directeur, sur laquelle on place à la fois des observations sur le site et des éléments à y intégrer. Par exemple :
@@ -84,10 +73,12 @@ Très souvent, les systèmes conçus sont des lieux qu’on souhaite aménager (
   <li>...</li>
 </ul>
 
-<figure class="design-example">
-  <img src="{{ "/assets/img/design_example.jpg" | relative_url }}" alt="Exemple de plan directeur." />
-  <figcaption>Exemple de plan directeur. Source : <a href="https://www.veryediblegardens.com.au/permaculture-design/">Very Edible Gardens</a></figcaption>
-</figure>
+{% include figure.html
+  img="/assets/img/design_example.jpg"
+  legend="Exemple de plan directeur."
+  source_url="https://www.veryediblegardens.com.au/permaculture-design/"
+  source_text="Very Edible Gardens"
+%}
 
 <p>
 Le plan directeur n’est néanmoins qu’une partie de la méthode de design. Si chaque permaculteur s’approprie cette stratégie à sa manière, elle suit néanmoins dans les grandes lignes quatre phases successives, chacune décomposable en phases intermédiaires. Nous reprenons ici le modèle VOOLRADIME introduit par Grégory Derville dans son excellent ouvrage <i>La Permaculture</i> :
@@ -123,7 +114,7 @@ Le plan directeur n’est néanmoins qu’une partie de la méthode de design. S
   <span class="description">Mon système fonctionne-t-il bien ? Que peut-on améliorer ?</span>
 </div>
 
-<div class="source">
+<div class="legend">
   Grégory Derville, “Le design permaculturel” dans <i>La Permaculture</i>. Terre vivante, 2018, p. 161
 </div>
 
