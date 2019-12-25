@@ -1,0 +1,21 @@
+.voolradime {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+  max-width: 600px;
+  margin: 15px auto 0px auto;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.voolradime > * {
+  border-top: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+  padding: 5px;
+}
+
+.voolradime .letter {
+  font-weight: bold;
+}
+
+.voolradime .description {
+  border-right: 1px solid #dfdfdf;
+}

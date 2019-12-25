@@ -2,8 +2,133 @@
 title: "Design permacole"
 description: "Outil numérique d'aide au design permacole."
 header: "header_design_permacole.html"
+css:
+  - /assets/css/text_page.css
+  - /assets/css/voolradime.css
 ---
 
 <h1><span>C</span>onception</h1>
+
+<p>
+Avec cet outil, nous souhaitons fournir une interface simple d’usage pour suivre l’ensemble des phases du design et créer un plan directeur esthétique et documenté. Pour autant, nous ne voulons pas réinventer la roue et renverrons aussi les permaculteurs vers des outils existants (il en existe notamment de nombreux pour planifier la mise en place du projet).
+</p>
+
+<p>
+Chaque permaculteur découpe à sa façon le design en phases. Pour cet outil, nous nous basons sur ce que propose Grégory Derville dans <i>La Permaculture</i> :
+</p>
+
+{% include voolradime.html %}
+
+<p>
+Pour autant, nous ne voulons rien imposer mais seulement fournir un ensemble de fonctionnalités que chacun pourra utiliser ou non selon ses préférences et son contexte. Pour aider à se repérer, l’outil donnera un aperçu sur l’avancement du design (« les objectifs n’ont pas été listés », « aucune analyse n’est attachée à tel objectif »...).
+</p>
+
+<p>
+En pratique, les phases de définition et d’observation se font en parallèle. En effet, tous les habitants ne savent pas exactement quelles activités mener sur le lieu et pourront s’inspirer de possibilités identifiées par le permaculteur durant la phase d’observation. À l’inverse, des objectifs déjà bien définis pourront être remis en question par l’observation.
+</p>
+
+<p>
+Nous souhaitons que l’interface mettent autant que possible en avant les informations pertinentes d’une phase à l’autre. Par exemple, lors de la mise en place du système, nous devrions pouvoir facilement remarquer qu’une personne du collectif a des compétences utiles pour telle tâche. Lors de la phase de conception, l’interface devra afficher les points de vigilance relevés durant la phase d’observation.
+</p>
+
+<p>
+Un objectif majeur de cet outil est d’inciter les approches systémiques, c’est-à-dire de créer des synergies entre les multiples éléments du système, y compris entre ceux de natures différentes. Par exemple, le rayonnement solaire reflété sur une mare peut chauffer un bâtiment, une haie peut canalyser le vent vers une éolienne mécanique, une pente peut permettre d’arroser notre potager avec peu d’effort…
+</p>
+
+<p>
+Avec ces synergies, nous souhaitons concevoir et mettre en place un système durable, performant et autonome permettant d’atteindre nos objectifs. La durabilité vise à garantir des bénéfices tout au long de notre vie, mais aussi pour celles des générations suivantes. Un système autonome à long terme minimise le travail humain : s’il s’auto-régule, nous pouvons consacrer notre temps à autre chose qu’à son entretien. La performance permet de produire en abondance avec un minimum de ressources (surface, énergie, matières premières...), puis de redistribuer.
+</p>
+
+<p>
+Pour concevoir de tels systèmes, il faut en premier lieu avoir défini clairement les objectifs et avoir une vue d’ensemble sur les éléments entre lesquels créer des synergies, ce qui pose les questions de la structuration de l’information et de sa visualisation.
+</p>
+
+<h2>Structurer l’information</h2>
+
+<p>
+Lors des phases de définition et d’observation, des informations de diverses natures seront collectées : textes (craintes d’un habitant, histoire du lieu...), données chiffrées (pluviométrie, surfaces des bâtiments...), données cartographiques (courbes de niveau, points d’eau, chemins...), etc. Identifier automatiquement des synergies potentielles entre tous ces objets serait très complexe, et nous ne voulons surtout pas que l’outil se substitue au travail d’observation et de réflexion des permaculteurs et des habitants. Par contre, nous pouvons rendre l’information suffisamment structurée pour être capable de faire facilement référence aux éléments et de marquer des interactions potentielles.
+</p>
+
+<p>
+Par exemple, supposons que la définition du projet prenne la forme d’un document texte contenant notamment « je veux absolument des moutons ». Déjà, si cette information n’est pas mise en valeur (par exemple en gras), il y a un risque de la manquer au moment de concevoir le lieu. Et même en y pensant, il ne sera pas tellement possible d’expliquer les moutons sur le plan autrement qu’en attachant un commentaire du type « untel veut absolument des moutons (cf. page X de la définition du projet) ». Or, non seulement mentionner le besoin via une référence à la page ne rend pas la navigation très fluide (il faut ouvrir le document, se rendre sur la page et chercher le passage dans le texte), mais cela ne permet pas non plus de s’assurer facilement que tous les besoins listés sont satisfaits.
+</p>
+
+<p>
+Par contre, si on en établit une liste interprétable par un ordinateur, ce dernier peut faire cette vérification. Structurer permet d’automatiser. Pour autant, le travail de réflexion à proprement parler (« a-t-on réellement besoin de moutons ? », « où les place-t-on ? »...) est mené par les habitants et les permaculteurs, pas par la machine. Nous estimons que cette implication humaine est indispensable à la durabilité du projet (car à sa compréhension et à l’engagement émotionnel de ses membres) et ne souhaitons de ce fait pas automatiser à l’excès.
+</p>
+
+<p>
+De façon similaire, en attachant des données chiffrées à un élément cartographique (la surface d’un bâtiment, le volume d’une cuve à eau, le degré d’une pente…) plutôt que de simplement le représenter graphiquement, il est possible par la suite d’automatiser certains calculs (la quantité d’eau de pluie récupérable, le manque de redondance dans son stockage...). Passer par la machine permet d’être plus efficace et d’éviter certains oublis, sans pour autant nuire à la compréhension du projet.
+</p>
+
+<p>
+L’outil permettra donc pour chaque phase de produire de l’information structurée, utilisable dans les phases suivantes. Nous veillerons dans le même temps à ce que ce besoin de structuration contraigne le moins possible le travail du permaculteur. Par exemple, avoir une liste claire d’objectifs suffit probablement, sans qu’il soit indispensable de leur imposer un format particulier.
+</p>
+
+<h2>Visualiser l’information</h2>
+
+<p>
+Une fois l’information structurée, nous sommes capables de désigner précisément les éléments du système (les objets au travers du plan, mais aussi les composantes humaines, climatiques...). Pour identifier les synergies entre ces éléments, il est alors utile, voire indispensable, de les visualiser.
+</p>
+
+<p>
+Autant que possible, nous représenterons ces informations sous forme cartographique. La visualisation dans l’espace est intuitive et, en rapportant le plus d’éléments possibles sur le plan, il est plus simple de les afficher simultanément et d’identifier des synergies. Par exemple, plutôt que d’avoir dans un texte une phrase du type « le ruisseau passe en amont le long de cultures conventionnelles et peut donc être pollué (aux nitrates, aux pesticides…) », nous afficherons directement sur la carte un signe d’alerte au niveau du ruisseau, avec un descriptif au clic ou au survol.
+</p>
+
+<p>
+Néanmoins, toutes les informations ne pourront être traduites en représentation cartographique (par exemple, les objectifs du projet ou la sympathie qu’éprouve un habitant envers les chèvres), aussi l’interface permettra d’afficher des éléments à côté de la carte (données pluviométriques...).
+</p>
+
+<p>
+En outre, nous ne pourrons tout représenter d’un coup à l’écran, au risque de le rendre illisible. Tout l’objectif est alors de définir des vues partielles pertinentes entre lesquelles il est simple de naviguer, pour identifier facilement des synergies potentielles entre leurs éléments respectifs.
+</p>
+
+<p>
+Par exemple, nous pourrions avoir les vues partielles suivantes :
+</p>
+
+<ul>
+  <li>Besoins en eau par saison et par zone (bâtiment principal, potager…), sous forme de tableau ;</li>
+  <li>Données pluviométriques, sous forme de graphique ;</li>
+  <li>Système d’eau existant (puits, cuves, mares, ruisseaux...), sous forme de représentation cartographique ;</li>
+  <li>Relief (courbes de niveau), sous forme de représentation cartographique ;</li>
+  <li>…</li>
+</ul>
+
+<p>
+Nous souhaitons que l’outil soit le plus flexible possible à ce niveau, en permettant d’afficher n’importe quels éléments ensemble, que ce soit sur le plan (une mare en particulier, un bâtiment précis, un flux spécifique...) ou à l’écran (le plan directeur, la liste des objectifs, les données pluviométriques...).
+</p>
+
+<p>
+Pour autant, la flexibilité demande des efforts de configuration. Afin que l’outil soit fonctionnel avec un paramétrage minimal, voire inexistant, nous définirons des vues par défaut. Naturellement, nous en aurons une par grande phase du design (définition, observation, conception et mise en place) puisque cette taxinomie nous paraît intuitive.
+</p>
+
+<p>
+Remarquons que les phases d’observation et de conception sont relativement similaires pour la visualisation, dans la mesure où elles consistent toutes les deux à décrire le lieu (seul le moment considéré, présent ou futur, change). Autrement dit, nous nous demandons comment représenter :
+</p>
+
+<ul>
+  <li>Ce que les membres du projet veulent et ne veulent pas (phase de définition)</li>
+  <li>Le site (phases d’observation et de conception)</li>
+  <li>La conduite des travaux à mener (phase de mise en place)</li>
+</ul>
+
+<p>
+Pour chaque composante, nous fournirons des moyens de filtrer efficacement l’information. Les filtres en question sont listés plus bas.
+</p>
+
+<p>
+Nous définirons également des vues transversales aux phases, permettant d’avoir un aperçu global sur un sujet, par exemple l’eau : les objectifs, les ressources, les facteurs limitants, les éléments à mettre en place, le planning d’installation, les indicateurs de performance… Ainsi, un professionnel du secteur intervenant sur le projet pourra facilement consulter toutes les informations le concernant.
+</p>
+
+<p>
+Combiner des informations de plusieurs phases permet également de mettre en avant des ensembles fonctionnels. L’objectif est de représenter en même temps des éléments de natures différentes (mare, relief, potager...) pour identifier des synergies permettant d’atteindre des objectifs donnés. L’outil permettra de facilement combiner les éléments (d’où l’avantage d’avoir structuré l’information au préalable) mais le choix des combinaisons sera laissé à l’utilisateur.
+</p>
+
+<p>
+Nous retrouverons ces vues fonctionnelles au sein de la phase d’analyse, consistant à lister les ressources et limites à prendre en compte pour atteindre un objectif. Mais nous pourrons également en avoir au moment de la mise en place (sur quelles ressources matérielles et humaines pouvons-nous nous appuyer pour construire tel élément ?), voire de définition du projet (sur quelles observations pouvons-nous nous baser pour estimer la pertinence de tel objectif ?).
+</p>
+
+<h2>Fonctionnalités</h2>
 
 En cours...

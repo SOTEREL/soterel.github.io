@@ -1,0 +1,21 @@
+#content h2,
+#content > p,
+#content > ul {
+  max-width: 600px;
+  margin: auto;
+}
+
+#content > p:not([class]) {
+  text-indent: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin: 10px 0px;
+}
+
+figure {
+  text-align: center;
+  margin: 20px 0px;
+}
