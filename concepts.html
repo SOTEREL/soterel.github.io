@@ -5,6 +5,10 @@ css:
   - /assets/css/section.css
   - /assets/css/infobox.css
   - /assets/css/section_page.css
+style: |
+  ul.resources li {
+    margin: 5px 0px;
+  }
 ---
 
 <h1><span>C</span>oncepts & définitions</h1>
@@ -16,10 +20,58 @@ css:
 <div class="sections">
   <h2 id="soutenabilite">Soutenabilité</h2>
   <div class="content">
+    <p>
+    Notre définition de la soutenabilité est celle de Daly :
+    </p>
+
+    <ul>
+      <li>Les ressources renouvelables sont consommées à un rythme inférieur à leur renouvellement ;</li>
+      <li>Les pollutions ne sont pas émises à un rythme supérieur à la capacité de l’environnement à les assimiler ;</li>
+      <li>Les ressources non renouvelables sont consommées suffisamment lentement pour que des substituts renouvelables respectant le premier point soient mis en place avant leur épuisement.</li>
+    </ul>
+
+    <p>
+    Souvent, cette définition porte le nom de « durabilité forte ». Nous employons dans ce projet ce terme de « durabilité » pour autre chose (cf. plus bas) et lui préférons donc ici son synonyme.
+    </p>
+
+    <p>
+    Remarquons que la soutenabilité n’est pas paramétrée par le temps. Un système n’est pas soutenable pour une durée donnée, il est soutenable tout court (ou pas).
+    </p>
+
+    <p>
+    En revanche, il est question dans cette définition à la fois de ressources consommées, de ressources produites et de pollutions assimilées. Lorsqu’on parle de soutenabilité, <strong>il convient donc de préciser ce qui est consommé et la zone géographique qui est considérée pour la production de ressources et l’assimilation des pollutions</strong>.
+    </p>
+
+    <p>
+    Par exemple, quand nous considérons la consommation de toute l’humanité et que la zone géographique est la planète, la soutenabilité peut être mesurée par le <a href="https://www.wwf.fr/jour-du-depassement">jour du dépassement</a>.
+    </p>
+
+    <p>
+    En analysant un système de chauffage au bois, la ressource consommée est le bois (plus les matières premières pour construire le poêle, la tronçonneuse, etc.) et les pollutions sont principalement le dioxyde de carbone, assimilé notamment par des arbres. La soutenabilité d’un tel système dépend alors de la surface forestière dédiée à la collecte de combustible et à l’absorption de CO2, et de comment elle est gérée.
+    </p>
+
+    <p>
+    <strong>Évidemment, un système peut n’être que partiellement soutenable.</strong> Le système de chauffage d’une maison peut respecter les conditions mentionnées précédemment et les habitants peuvent dans le même temps consommer par an plus de poissons que les populations du lac voisin ne sont capables d’en régénérer.
+    </p>
+
+    <p>
+    Les habitants en question peuvent alors :
+    </p>
+
+    <ul>
+      <li>Réduire leur consommation de poissons</li>
+      <li>Améliorer le taux de reproduction des populations, c’est-à-dire augmenter le rythme de renouvellement des ressources</li>
+      <li>Étendre leur zone géographique de soutenabilité (en allant également pêcher dans un autre étang)</li>
+    </ul>
+
+    <p>
+    Aujourd’hui, les pays occidentaux optent principalement pour la troisième méthode, en important des ressources de l’étranger ou en se les accaparant directement. <strong>Cette stratégie soulève la question des conflits qu’elle peut engendrer, mais aussi celle de la résilience.</strong>
+    </p>
+
+    <p>
+    Notons enfin que nous avons parlé de production de ressources et d’assimilation de pollutions de la part des écosystèmes, mais <strong>il est important de considérer les humains également</strong>. Malgré une empreinte écologique soutenable, des habitants faisant du bruit au-delà de ce que leurs voisins peuvent supporter (ou « assimiler »), ou une entreprise demandant à ses employés du travail au-delà de ce qu’ils peuvent fournir, s’exposent inéluctablement à une atténuation, voire une rupture, de leur bon fonctionnement à long terme. 
+    </p>
     {% capture resources %}
-      <ul class="resources">
-        <li></li>
-      </ul>
     {% endcapture %}
     {% include infobox.html
       title="Ressources complémentaires"
@@ -30,33 +82,86 @@ css:
   <h2 id="resilience">Résilience</h2>
   <div class="content">
     <p>
-      Nous définissons la résilience comme la <strong>capacité d'un système à conserver ses fonctions essentielles en cas de choc</strong>, au prix éventuel d'une restructuration interne.
+    Nous définissons la résilience comme la <strong>capacité d'un système à conserver ses fonctions essentielles en cas de choc</strong>, au prix éventuel d'une restructuration interne.
     </p>
+
     <p>
-      Par exemple, TODO.
+    Par exemple, une commune puisant son eau potable d’une seule source s’expose à une pénurie en cas de contamination. En diversifiant ses approvisionnements, elle se donne la possibilité de se passer de la source contaminée sans pour autant se retrouver complètement démunie.
     </p>
+
     <p>
-      Autre exemple : TODO.
+    Autre exemple : un paysan stockant tout son foin dans un seul bâtiment court le risque de tout perdre en cas d’incendie. Ce sera d’autant plus impactant si les bêtes sont nourries avec cet aliment uniquement. En revanche, si ces fonctions de stockage et d’alimentation sont assurées par plusieurs éléments (un second entrepôt, des arbres fourragers…), l’incendie sera moins nuisible.
     </p>
+
     <p>
-      On se rend compte ici qu'<strong>il n'existe pas de résilience dans l'absolu</strong>. Un système est résilient par rapport à une catégories de chocs et pour un ensemble de fonctions à conserver donnés. Pire, la résilience sur un aspect peut nuire à celle sur un autre. Il convient donc d'avoir conscience de ces incompatibilités et de les arbitrer.
+    On se rend compte ici qu'<strong>il n'existe pas de résilience dans l'absolu</strong>. Un système est résilient par rapport à une catégories de chocs et pour un ensemble de fonctions à conserver donnés. Pire, la résilience sur un aspect peut nuire à celle sur un autre. Il convient donc d'avoir conscience de ces incompatibilités et de les arbitrer.
     </p>
+
     <p>
-      Par exemple, TODO.
+    Par exemple, la résilience alimentaire demande à priori de cultiver plus que nécessaire, au cas où un ravageur, par exemple, nous priverait d’une partie des récoltes. Mais ce supplément est autant de surface non consacrée à la pousse de bois de chauffage, ce qui, selon la surface totale, peut impliquer un manque d’autonomie sur cette ressource.
     </p>
+
     <p>
-      <strong>La résilience implique un minimum d’autonomie.</strong> Effectivement, si le système dépend de l’extérieur, nous ne pouvons garantir le fait qu’il saura se réorganiser en cas de choc. Notamment, tout ce qui provient de l’extérieur du système y a très probablement été acheminé par du pétrole, dont l’abondance n’est pas garantie dans le futur.
+    En effet, <strong>la résilience implique un minimum d’autonomie</strong> puisque si le système dépend de l’extérieur, nous ne pouvons garantir le fait qu’il saura se réorganiser en cas de choc. Notamment, tout ce qui provient de l’extérieur du système y a très probablement été acheminé par du pétrole, dont l’abondance n’est pas garantie dans le futur.
     </p>
+
     <p>
-      La résilience incite donc fortement à <strong>relocaliser nos activités</strong> pour satisfaire <i>a minima</i> nos besoins de base, ce qui signifie puiser ressources et énergie sur son territoire. Garantir la soutenabilité demande alors d’ajuster ses usages aux limites physiques de la zone géographique considérée.
+    La résilience incite donc fortement à <strong>relocaliser nos activités</strong> pour satisfaire a minima nos besoins de base, ce qui signifie puiser ressources et énergie sur son territoire. Garantir la soutenabilité demande alors d’ajuster ses usages aux limites physiques de la zone géographique considérée.
     </p>
+
     <p>
-      Toutefois, <strong>autonomie ne signifie pas autarcie</strong> et il est illusoire de s’imaginer prospère dans un environnement instable. Aussi se pose la question du <strong>compromis entre résilience et soutenabilité</strong>. Là où la première incite à s’accaparer les ressources, la seconde encourage le partage avec les voisins.
+    Toutefois, <strong>autonomie ne signifie pas autarcie</strong> et il est illusoire de s’imaginer durable dans un environnement instable. Aussi se pose la question du <strong>compromis entre résilience et soutenabilité</strong>. Là où la première incite à s’accaparer les ressources, la seconde encourage le partage avec les voisins.
     </p>
+
     {% capture resources %}
-      <ul class="resources">
-        <li></li>
-      </ul>
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
+  </div>
+
+  <h2 id="durabilite">Durabilité</h2>
+  <div class="content">
+    <p>
+    Nous définissons la durabilité comme la <strong>combinaison de la soutenabilité et de la résilience</strong>. Un système durable fonctionne dans le respect des limites humaines et écosystémiques de sa zone géographique et met en place des stratégies pour se protéger de chocs éventuels.
+    </p>
+
+    <p>
+    Souvent, la durabilité est un synonyme de la soutenabilité définie plus haut. Seulement, comme nous l’avons expliqué, il est primordial de considérer en même temps la résilience et la soutenabilité, aussi nous avons souhaité définir un terme pour désigner la conjonction des deux. 
+    </p>
+
+    <p>
+    Comme nous n’avons pour le moment pas défini de mesure binaire de résilience, nous ne pouvons affirmer qu’un système l’est ou ne l’est pas. Par conséquent, <strong>nous nous abstiendrons également de trancher sur le caractère durable ou non d’un système</strong>.
+    </p>
+
+    <p>
+    En outre, il faudrait en toute rigueur préciser pour quelles fonctions et face à quels chocs le système est résilient, de la même manière qu’un système est soutenable par rapport à un ensemble de ressources consommées et une zone géographique considérée. Il conviendrait alors de préciser tous ces paramètres lorsque nous parlons de durabilité. De ce fait, <strong>nous nous contenterons, au moins dans un premier temps, d’un emploi imprécis de cette notion</strong>.
+    </p>
+
+    {% capture resources %}
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
+  </div>
+
+  <h2 id="systemique">Systémique</h2>
+  <div class="content">
+    <p>
+    Nous définissons la systémique comme une façon d’analyser les phénomènes en considérant qu’<strong>ils sont engendrés par un ensemble d’interactions, souvent complexes, entre des éléments de diverses natures</strong>. Plutôt que découper ce système en sous-parties étudiées indépendamment, cette approche considère l’ensemble.
+    </p>
+
+    <p>
+    Par exemple, une analyse systémique de la durabilité de nos modes de vie occidentaux consiste à prendre en compte à la fois les émissions de gaz à effet de serre (changement climatique), la finitude des ressources (pic pétrolier, pics des métaux, ressources halieutiques…), la destruction des écosystèmes (pollutions, artificialisation…), les inégalités sociales (patriarcat, homophobie, lutte des classes…), etc. 
+    </p>
+
+    <p>
+    Concevoir un lieu selon une approche systémique implique d’identifier les interactions entre ses diverses composantes (alimentation, eau, construction, chauffage, santé…), alors qu’on a plutôt tendance à considérer ces parties indépendamment (d’autant plus que le pétrole en abondance nous permet d’importer et d’exporter des ressources à bas coût, ce qui n’incite pas à se coordonner avec ses voisins).
+    </p>
+
+    {% capture resources %}
     {% endcapture %}
     {% include infobox.html
       title="Ressources complémentaires"
@@ -66,9 +171,76 @@ css:
 
   <h2 id="permaculture">Permaculture</h2>
   <div class="content">
+    <p>
+    Nous définissons la permaculture comme la culture de la permanence : <strong>un ensemble de valeurs, de principes et de pratiques pour concevoir et mettre en place des systèmes durables, autonomes et performants</strong>.
+    </p>
+
+    <p>
+    En s’inspirant de la nature, on cherche à créer des synergies entre les éléments d’un système pour optimiser l’usage des ressources et de l’énergie et faire en sorte que ce système fonctionne sur le long terme avec un effort humain minimal, tout en respectant les limites de l’écosystème et des individus. La réflexion se veut largement systémique.
+    </p>
+
+    <p>
+    Formalisée dans les années 70 par Bill Mollison et David Holmgren, la permaculture part du constat de la finitude des ressources pétrolières et a surtout consisté en la synthétisation de connaissances et de pratiques sur la conception de systèmes agricoles durables.
+    </p>
+
+    <p>
+    Puis cette démarche s’est élargie à d’autres domaines et s’applique aujourd’hui à la construction, l’éducation, la santé, la gouvernance… Loin de se résumer à des pratiques de jardinage, <strong>la permaculture fournit un véritable cadre de vie</strong>, sous forme de pyramide à trois niveaux.
+    </p>
+
+    <p>
+    À la base, les <strong>valeurs</strong>. Au nombre de trois, elles posent le cadre de réflexion de la permaculture et se veulent des <strong>guides pour nos pensées</strong>. Ces éthiques sont :
+    </p>
+
+    <ul>
+      <li>Respecter et être attentif à la nature</li>
+      <li>Respecter et être attentif à l’humain</li>
+      <li>Produire en abondance, prendre son juste besoin et partager les surplus</li>
+    </ul>
+
+    <p>
+    Remarquons que le cadre est peu défini : chacun peut en placer les limites à sa convenance. C’est la raison pour laquelle il est question de guider plutôt que de dicter. En outre, les deux premières valeurs, qui se fusionnent en « respecter et être attentif au vivant », peuvent s’avérer conflictuelles (le sont intrinsèquement diraient certains). Pour préserver ma santé, je peux préférer utiliser une machine qui a demandé l’extraction et le transport de métaux pour être fabriquée. L’arbitrage n’est pas toujours simple, ni toujours inévitable : <strong>ai-je réellement besoin</strong> de ce pour quoi je souhaite utiliser la machine ?
+    </p>
+
+    <p>
+    Suivent les <strong>principes</strong>. <strong>Guides pour nos actes</strong>, ils s’inspirent de la nature pour nous aider à prendre des décisions efficaces dans le respect des éthiques. Il n’en existe pas de liste officielle ; Bill Mollison et David Holmgren en recensent respectivement dix et douze et chacun les formule à sa manière. Néanmoins, les concepts sous-jacents sont très similaires et les principes se veulent universels : ils s’appliquent aussi bien à l’agriculture et à la construction, qu’à l’éducation, la gouvernance... Pour autant, ce ne sont pas des dogmes : suivis machinalement sans prise en compte du contexte, ils perdent leur valeur, voire peuvent s’avérer contre-productifs. Parmi les principes de Mollison et Holmgren, on a :
+    </p>
+
+    <ul>
+      <li>Assurer chaque fonction importante par plusieurs éléments</li>
+      <li>Favoriser et valoriser la diversité</li>
+      <li>Ne produire aucun déchet</li>
+      <li>Utiliser et valoriser les ressources et l’énergie renouvelables</li>
+      <li>Travailler avec la nature plutôt que contre elle</li>
+    </ul>
+
+    <p>
+    Enfin, les <strong>techniques</strong>. Au fil du temps, des pratiques se sont révélées plus efficaces que d’autres et/ou plus respectueuses des valeurs de la permaculture. Elles nous aident à <strong>passer concrètement à l’action</strong> et sont pour cette raison très attrayantes. Toutefois, parfois focalisé davantage sur le résultat que sur la démarche, on a tendance à se concentrer sur ces outils plutôt que sur les raisons pour lesquelles on les utilise, en oubliant que la pertinence d’une technique est fortement conditionnée au contexte (climat, sol, habitants…) et aux objectifs. 
+    </p>
+
+    <p>
+    Ces trois composantes sont combinées dans le <strong>design permacole</strong> : une méthode pour concevoir et mettre en place des systèmes durables, autonomes et performants, dans le respect des éthiques, en s’inspirant des principes et à l’aide des techniques de la permaculture. Chaque permaculteur se l’approprie à sa manière mais cette stratégie consiste dans les grandes lignes en quatre phases successives :
+    </p>
+
+    <ul>
+      <li>La définition du projet</li>
+      <li>L’observation du contexte</li>
+      <li>La conception du système</li>
+      <li>Sa mise en place</li>
+    </ul>
+
+    <p>
+    Très souvent, les systèmes conçus sont des lieux qu’on souhaite aménager (une maison, une ferme, un hameau, un village...), même si la méthode de design peut aussi se suivre pour concevoir des organisations humaines ne s’incarnant pas sur un site particulier. Dans tous les cas, la méthode de design est une démarche systémique : elle prend en compte les problématiques de logement, d’alimentation, de santé, d’économie, etc.
+    </p>
+
     {% capture resources %}
       <ul class="resources">
         <li>Grégory Derville, <i>La permaculture</i>, Terre vivante, 2018.</li>
+        <li>Christophe Curci & Benjamin Broustey, <i>Méthodologie et outils clefs du design en permaculture</i>, Imagine Un Colibri, 2017.</li>
+        <li>Jessi Bloom & David Boehnlein, <i>La permaculture en pratique</i>, Ulmer, 2015.</li>
+        <li>David Holmgren, <i>Permaculture</i>, Rue de l’échiquier, 2014.</li>
+        <li><a href="https://www.youtube.com/channel/UC8PEEf3BBouA4pAaqWUQvNg">Atelier Fertile</a></li>
+        <li><a href="https://www.youtube.com/user/permacultureetc">permaculture agroécologie etc...</a></li>
+        <li><a href="https://www.youtube.com/channel/UC9Q8WeyCb3yxySC3P3mGpBw">Le Jardin d'Emerveille</a></li>
       </ul>
     {% endcapture %}
     {% include infobox.html
@@ -80,10 +252,30 @@ css:
   <h2 id="echelle-locale">Échelle locale</h2>
   <div class="content">
     <p>
-      Eco-lieu à commune, éventuellement inter-communes
+    Nous définissons l’échelle locale comme une <strong>échelle communale pouvant s’étendre du hameau et à la communauté de communes</strong>.
     </p>
+
     <p>
-      Pourquoi cette échelle ?
+    Comme expliqué précédemment, <strong>la résilience implique un minimum d’autonomie</strong> (sans pour autant faire preuve d’autarcie), notamment du fait du pic pétrolier. L’intention est alors d’étudier des zones « suffisamment » riches en ressources et en compétences humaines, donc un minimum étendues et peuplées.
     </p>
+
+    <p>
+    Dans le même temps, nous partons du constat que <strong>le cerveau humain appréhende mal les phénomènes éloignés</strong>, que ce soit dans l’espace ou dans le temps. Nous souhaitons donc nous concentrer sur des zones « suffisamment » petites pour percevoir les conséquences de nos actes, et avec une population « suffisamment » faible pour qu’une communauté solide puisse se créer. En outre, conserver de faibles distances géographiques permet de <strong>limiter le transport</strong> et les risques liés à ses vulnérabilités.
+    </p>
+
+    <p>
+    De prime abord, la commune semble satisfaire ce compromis. En outre, <strong>son existence juridique structure les rapports humains et s’accompagne de moyens techniques et financiers</strong> non négligeables. Par exemple en cas d’incident, la population sait à priori qu’elle peut s’adresser à son conseil municipal. Il sera aussi plus simple de développer, mettons, l’indépendance énergétique avec le support de la collectivité qu’entre citoyens uniquement.
+    </p>
+
+    <p>
+    Préciser ce « suffisamment » fait partie de notre réflexion autour d’un outil de diagnostic de résilience. Remarquons dès à présent que, si on peut éventuellement lui identifier des bornes en observant ce que peut « correctement » appréhender « le » cerveau humain, par exemple au travers d’indicateurs comme le nombre de Dunbar, <strong>la pertinence de l’échelle est fortement conditionnée au contexte</strong> (aux ressources disponibles, aux relations entre les habitants, aux compétences de ces derniers…), aussi nous n’escomptons pas en définir une absolument optimale.
+    </p>
+
+    {% capture resources %}
+    {% endcapture %}
+    {% include infobox.html
+      title="Ressources complémentaires"
+      description=resources
+    %}
   </div>
 </div>
